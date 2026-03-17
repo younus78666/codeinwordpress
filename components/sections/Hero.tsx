@@ -17,17 +17,17 @@ export function Hero() {
             Trusted by {siteConfig.stats.clients} businesses across New Mexico
           </div>
 
-          {/* H1 */}
+          {/* H1 — Primary keyword: WordPress agency New Mexico */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground tracking-tight leading-[1.08] mb-6 animate-slide-up">
-            WordPress Websites That{' '}
-            <span className="text-primary-600">Drive Growth</span>
+            The WordPress Agency{' '}
+            <span className="text-primary-600">New Mexico</span> Businesses Trust
           </h1>
 
-          {/* Subheadline */}
+          {/* Subheadline — conversational, includes secondary KWs */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: '0.15s' }}>
-            Professional WordPress development, speed optimization, and SEO services
-            for businesses in Albuquerque, Santa Fe, Las Cruces, and across New Mexico.
-            Fast sites. Higher rankings. Real results.
+            We build WordPress websites that actually work for your business. Fast load times,
+            search engine visibility, rock-solid security. Serving Albuquerque, Santa Fe,
+            Las Cruces, and every corner of New Mexico.
           </p>
 
           {/* CTAs */}
@@ -39,19 +39,23 @@ export function Hero() {
               </svg>
             </Button>
             <Button href="/pricing" variant="outline" size="lg">
-              View Pricing
+              See Our Pricing
             </Button>
           </div>
 
-          {/* Trust indicators */}
+          {/* Trust indicators — E-E-A-T signals */}
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 mt-12 text-sm text-muted-foreground font-heading animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-              {siteConfig.stats.projects} Projects Completed
+              {siteConfig.stats.projects} Projects Delivered
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-              {siteConfig.stats.satisfaction} Satisfaction Rate
+              {siteConfig.stats.satisfaction} Client Satisfaction
+            </span>
+            <span className="flex items-center gap-1.5">
+              <svg className="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+              {siteConfig.stats.experience} Years in WordPress
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4 text-success" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>

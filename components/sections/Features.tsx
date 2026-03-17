@@ -7,41 +7,41 @@ import { siteConfig } from '@/content/site-config'
 const features = [
   {
     icon: '⚡',
-    title: 'Built for Speed',
-    description: 'Every site we build scores 90+ on Google Lighthouse. Faster sites mean better rankings, lower bounce rates, and happier visitors.',
+    title: 'Speed That Actually Matters',
+    description: 'Your visitors decide in under 3 seconds whether to stay or leave. We build every site to score 90+ on Google Lighthouse because speed directly impacts your bottom line. Not just fast on a test, fast for real people on real connections.',
   },
   {
     icon: '🔍',
-    title: 'SEO from Day One',
-    description: 'Schema markup, meta optimization, sitemaps, and clean architecture baked into every project. Not bolted on as an afterthought.',
+    title: 'SEO Baked In, Not Bolted On',
+    description: 'Most agencies build a pretty site and then "add SEO later." We do it backwards. Schema markup, meta tags, sitemaps, internal linking, clean URLs. All of it goes in before the first pixel is placed. That way your site actually gets found.',
   },
   {
     icon: '🛡️',
-    title: 'Security First',
-    description: 'Hardened WordPress installations with firewall config, login protection, malware scanning, and regular security audits.',
+    title: 'Security You Can Sleep On',
+    description: 'WordPress powers 43% of the web, which also makes it the biggest target for hackers. We harden every installation with firewall rules, two-factor auth, file permission lockdowns, and ongoing malware monitoring. Because one breach can undo years of trust.',
   },
   {
     icon: '📱',
-    title: 'Mobile-First Design',
-    description: 'Over 60% of web traffic is mobile. Every layout, button, and image is optimized for smaller screens first, then scaled up.',
+    title: 'Mobile-First, Always',
+    description: 'Over 60% of your visitors are on their phone right now. Every layout, every button, every image we create starts on a small screen and scales up. Not the other way around. Your site will look and work great on any device.',
   },
   {
     icon: '🤝',
-    title: 'Transparent Pricing',
-    description: 'No hidden fees, no surprise invoices. You know exactly what you are paying for before we write a single line of code.',
+    title: 'No Surprises on the Invoice',
+    description: 'You will know exactly what you are paying for before we write a single line of code. Our pricing page is public, our scope documents are detailed, and we will never hit you with charges we did not discuss upfront. That is just how we operate.',
   },
   {
     icon: '🔧',
-    title: '6 Months Free Support',
-    description: 'Every project includes half a year of post-launch support. Bug fixes, minor updates, and guidance at no extra cost.',
+    title: '6 Months of Free Support',
+    description: 'We do not disappear after launch. Every project comes with six months of post-launch support for bug fixes, minor tweaks, and questions. If something breaks that we built, we fix it. Period. After that, our maintenance plans keep things running smooth.',
   },
 ]
 
 export function WhyChooseUs() {
   return (
     <SectionWrapper
-      heading="Why Businesses Choose Us"
-      subheading="We combine deep technical WordPress expertise with business strategy. Here is what sets us apart from template-based agencies."
+      heading="Why New Mexico Businesses Choose Us"
+      subheading="We are not a template shop. We write real code, do real SEO, and build websites that generate real leads. Here is what makes working with us different."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {features.map((feature, i) => (
@@ -60,11 +60,11 @@ export function WhyChooseUs() {
 
 /* ── CTA Banner ── */
 export function CTABanner({
-  heading = 'Ready to Get a Website That Works?',
-  subheading = 'Let us build you a fast, secure, SEO-optimized WordPress website. Get a free quote today.',
+  heading = 'Ready to Get a Website That Actually Works?',
+  subheading = 'Tell us about your project. We will send you a detailed quote within 24 hours. No pressure, no commitment.',
   primaryText = siteConfig.ctaPrimary,
   primaryHref = '/contact',
-  secondaryText = 'View Pricing',
+  secondaryText = 'See Our Pricing',
   secondaryHref = '/pricing',
 }: {
   heading?: string

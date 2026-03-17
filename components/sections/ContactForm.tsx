@@ -54,7 +54,12 @@ export function ContactForm({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+    <form onSubmit={handleSubmit} className="space-y-5 relative" noValidate>
+      {/* Honeypot - hidden from humans, catches bots */}
+      <div className="absolute opacity-0 -z-10 h-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input type="text" id="website" name="website" autoComplete="off" tabIndex={-1} />
+      </div>
       <div className={cn(compact ? 'space-y-4' : 'grid grid-cols-1 sm:grid-cols-2 gap-5')}>
         <FormField label="Full Name" name="name" required placeholder="John Smith" error={errors.name} />
         <FormField label="Email Address" name="email" type="email" required placeholder="john@company.com" error={errors.email} />

@@ -10,6 +10,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { BreadcrumbSchema, JsonLd } from '@/components/seo/JsonLd'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { CTABanner } from '@/components/sections/Features'
+import { BlogSidebar } from '@/components/sections/BlogSidebar'
 
 type Props = { params: { slug: string } }
 
@@ -98,47 +99,54 @@ export default function BlogPostPage({ params }: Props) {
           </Container>
         </header>
 
-        {/* Article Body */}
+        {/* 2-Column: Article Body + Sidebar */}
         <section className="py-12 md:py-16">
           <Container>
-            <div className="max-w-3xl">
-              <div
-                className="prose prose-lg prose-slate max-w-none
-                  prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight
-                  prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4
-                  prose-p:text-secondary-600 prose-p:leading-relaxed
-                  prose-a:text-primary-600 prose-a:underline prose-a:decoration-primary-300 prose-a:underline-offset-2 hover:prose-a:decoration-primary-600
-                  prose-strong:text-foreground
-                  prose-li:text-secondary-600"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
-            </div>
-          </Container>
-        </section>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
+              {/* Main content - 2/3 width */}
+              <div className="lg:col-span-2">
+                {/* Article prose */}
+                <div
+                  className="prose prose-lg prose-slate max-w-none
+                    prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight
+                    prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4
+                    prose-p:text-secondary-600 prose-p:leading-relaxed
+                    prose-a:text-primary-600 prose-a:underline prose-a:decoration-primary-300 prose-a:underline-offset-2 hover:prose-a:decoration-primary-600
+                    prose-strong:text-foreground
+                    prose-li:text-secondary-600"
+                  dangerouslySetInnerHTML={{ __html: post.content }}
+                />
 
-        {/* Author Bio */}
-        <section className="py-10 border-t border-border">
-          <Container>
-            <div className="max-w-3xl">
-              <AnimateOnScroll>
-                <div className="flex items-start gap-5 bg-muted rounded-2xl p-6 md:p-8">
-                  <div className="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-lg font-heading font-bold shrink-0">
-                    {post.author.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <p className="text-xs font-heading font-semibold text-muted-foreground uppercase tracking-wider mb-1">Written by</p>
-                    <h3 className="text-lg font-heading font-bold text-foreground mb-1">{post.author.name}</h3>
-                    <p className="text-sm text-muted-foreground mb-3">{post.author.role}</p>
-                    <p className="text-sm text-secondary-600 leading-relaxed">{post.author.bio}</p>
-                    <Link href="/about" className="inline-flex items-center gap-1 text-sm font-heading font-semibold text-primary-600 mt-3 hover:gap-2 transition-all">
-                      Learn more about the team
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
+                {/* Author Bio */}
+                <div className="mt-12 pt-10 border-t border-border">
+                  <AnimateOnScroll>
+                    <div className="flex items-start gap-5 bg-muted rounded-2xl p-6 md:p-8">
+                      <div className="w-14 h-14 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 text-lg font-heading font-bold shrink-0">
+                        {post.author.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div>
+                        <p className="text-xs font-heading font-semibold text-muted-foreground uppercase tracking-wider mb-1">Written by</p>
+                        <h3 className="text-lg font-heading font-bold text-foreground mb-1">{post.author.name}</h3>
+                        <p className="text-sm text-muted-foreground mb-3">{post.author.role}</p>
+                        <p className="text-sm text-secondary-600 leading-relaxed">{post.author.bio}</p>
+                        <Link href="/about" className="inline-flex items-center gap-1 text-sm font-heading font-semibold text-primary-600 mt-3 hover:gap-2 transition-all">
+                          Learn more about the team
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  </AnimateOnScroll>
                 </div>
-              </AnimateOnScroll>
+              </div>
+
+              {/* Sidebar - 1/3 width, sticky */}
+              <div className="lg:col-span-1">
+                <div className="lg:sticky lg:top-24">
+                  <BlogSidebar />
+                </div>
+              </div>
             </div>
           </Container>
         </section>

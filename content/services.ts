@@ -11,9 +11,9 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: 'wordpress-development',
-    title: 'Custom WordPress Development',
-    shortTitle: 'WordPress Dev',
-    description: 'Pixel-perfect WordPress websites built with clean code, fast load times, and conversion-focused design. From starter sites to complex multi-page builds.',
+    title: 'Custom WordPress Development in New Mexico',
+    shortTitle: 'WordPress Development',
+    description: 'We build WordPress websites from scratch with clean code, not cookie-cutter templates. Every site is custom-designed for your brand, optimized for speed, and built to convert visitors into customers.',
     icon: '⚡',
     features: [
       'Custom theme development from scratch',
@@ -29,7 +29,7 @@ export const services: Service[] = [
     slug: 'speed-optimization',
     title: 'WordPress Speed Optimization',
     shortTitle: 'Speed Optimization',
-    description: 'Slow sites lose visitors and rankings. We diagnose bottlenecks, optimize assets, configure caching, and deliver measurable speed improvements.',
+    description: 'A slow website costs you money every single day. We dig into your WordPress setup, find every bottleneck, and fix them. Most clients see their Lighthouse score jump 40 to 60 points within a week.',
     icon: '🚀',
     features: [
       'Core Web Vitals optimization',
@@ -45,7 +45,7 @@ export const services: Service[] = [
     slug: 'wordpress-seo',
     title: 'WordPress SEO Services',
     shortTitle: 'WordPress SEO',
-    description: 'Technical SEO audits, on-page optimization, schema markup, and content strategies that get your WordPress site ranking on Google.',
+    description: 'Getting traffic from Google is not magic, it is technical precision. We handle the schema markup, meta optimization, internal linking, and content structure that search engines actually care about.',
     icon: '📈',
     features: [
       'Comprehensive technical SEO audit',
@@ -61,7 +61,7 @@ export const services: Service[] = [
     slug: 'website-maintenance',
     title: 'WordPress Maintenance Plans',
     shortTitle: 'Maintenance',
-    description: 'Keep your WordPress site secure, updated, and running smoothly with proactive maintenance. Backups, updates, monitoring, and priority support.',
+    description: 'WordPress is not a set-it-and-forget-it platform. Plugins need updating, backups need running, and security needs monitoring. Our maintenance plans handle all of it so you can focus on running your business.',
     icon: '🛡️',
     features: [
       'Weekly core and plugin updates',
@@ -77,7 +77,7 @@ export const services: Service[] = [
     slug: 'security-hardening',
     title: 'WordPress Security Hardening',
     shortTitle: 'Security',
-    description: 'Protect your website from hackers, malware, and vulnerabilities. We lock down your WordPress installation and clean infected sites.',
+    description: 'If your WordPress site gets hacked, you lose rankings, customer trust, and potentially sensitive data. We lock down your installation with firewall rules, malware scanning, and proactive monitoring before problems happen.',
     icon: '🔒',
     features: [
       'Malware scanning and removal',
@@ -93,7 +93,7 @@ export const services: Service[] = [
     slug: 'woocommerce-development',
     title: 'WooCommerce Development',
     shortTitle: 'WooCommerce',
-    description: 'Launch or upgrade your online store with WooCommerce. Custom product pages, payment gateways, shipping setup, and conversion optimization.',
+    description: 'Selling online should not mean fighting with your website. We set up WooCommerce stores that are fast, easy to manage, and optimized to turn browsers into buyers. From product pages to checkout flow, every step is designed to convert.',
     icon: '🛒',
     features: [
       'Custom WooCommerce store setup',
@@ -109,7 +109,7 @@ export const services: Service[] = [
     slug: 'website-redesign',
     title: 'WordPress Website Redesign',
     shortTitle: 'Redesign',
-    description: 'Outdated website holding you back? We redesign your WordPress site with modern aesthetics, better UX, and improved conversions.',
+    description: 'Your website is the first impression most customers get of your business. If it looks outdated, loads slowly, or does not work on mobile, you are losing money. We redesign WordPress sites with modern aesthetics, better UX, and SEO-safe migrations.',
     icon: '🎨',
     features: [
       'Full visual redesign and rebrand',

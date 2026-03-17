@@ -9,8 +9,8 @@ export function ServicesOverview() {
   return (
     <SectionWrapper
       id="services"
-      heading="WordPress Services Built for Results"
-      subheading="From development to ongoing optimization, every service is designed to make your website faster, more visible, and more profitable."
+      heading="What We Do for New Mexico Businesses"
+      subheading="Every service is built around one goal: making your WordPress website a lead-generating machine. No fluff, no filler, just work that moves the needle."
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {services.slice(0, 6).map((service, i) => (
@@ -41,10 +41,10 @@ export function ServicesOverview() {
 
 /* ── Stats Bar ── */
 const stats = [
-  { value: siteConfig.stats.projects, label: 'Projects Completed' },
-  { value: siteConfig.stats.clients, label: 'Happy Clients' },
-  { value: siteConfig.stats.experience, label: 'Years Experience' },
-  { value: siteConfig.stats.satisfaction, label: 'Satisfaction Rate' },
+  { value: siteConfig.stats.projects, label: 'WordPress Projects Delivered' },
+  { value: siteConfig.stats.clients, label: 'Businesses Served' },
+  { value: siteConfig.stats.experience, label: 'Years Building WordPress' },
+  { value: siteConfig.stats.satisfaction, label: 'Client Satisfaction Rate' },
 ]
 
 export function StatsBar() {

@@ -9,7 +9,10 @@ type Props = {
 }
 
 export function GoogleMap({ lat, lng, zoom = 13, title = 'Our Location', className }: Props) {
-  const src = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${lat},${lng}&zoom=${zoom}`
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || ''
+  const src = apiKey
+    ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${lat},${lng}&zoom=${zoom}`
+    : `https://www.google.com/maps?q=${lat},${lng}&z=${zoom}&output=embed`
 
   return (
     <div className={cn('w-full rounded-2xl overflow-hidden border border-border shadow-sm', className)}>

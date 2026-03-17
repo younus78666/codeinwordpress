@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secrets - NEVER commit these
+*.key
+*.pem
+*.cert
+.env.production
+.env.staging

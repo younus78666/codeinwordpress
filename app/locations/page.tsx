@@ -9,6 +9,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { BreadcrumbSchema } from '@/components/seo/JsonLd'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { CTABanner } from '@/components/sections/Features'
+import { GoogleMap } from '@/components/sections/GoogleMap'
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'WordPress Agency Serving All of New Mexico',
@@ -46,7 +47,6 @@ export default function LocationsPage() {
               <AnimateOnScroll key={location.slug} delay={i * 80}>
                 <Link href={`/locations/${location.slug}`} className="block h-full group">
                   <Card className="h-full flex flex-col" padding="lg">
-                    {/* City badge */}
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
                         <div className="w-10 h-10 rounded-xl bg-primary-100 flex items-center justify-center">
@@ -63,18 +63,12 @@ export default function LocationsPage() {
                         Pop. {location.population}
                       </span>
                     </div>
-
-                    {/* City name */}
                     <h2 className="text-xl font-heading font-bold text-foreground group-hover:text-primary-600 transition-colors mb-2">
                       {location.city}
                     </h2>
-
-                    {/* Description */}
                     <p className="text-sm text-muted-foreground mb-4 flex-1">
                       {location.description}
                     </p>
-
-                    {/* Neighborhoods */}
                     <div className="flex flex-wrap gap-1.5 mb-4">
                       {location.neighborhoods.slice(0, 3).map((n) => (
                         <span key={n} className="px-2 py-0.5 rounded-md bg-muted text-xs font-heading text-muted-foreground">
@@ -87,8 +81,6 @@ export default function LocationsPage() {
                         </span>
                       )}
                     </div>
-
-                    {/* CTA */}
                     <span className="inline-flex items-center gap-1.5 text-sm font-heading font-semibold text-primary-600 group-hover:gap-2.5 transition-all">
                       View {location.city} page
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -103,7 +95,7 @@ export default function LocationsPage() {
         </Container>
       </section>
 
-      {/* Map overview */}
+      {/* Map overview - using GoogleMap component (no hardcoded API key) */}
       <section className="py-16 md:py-24 bg-muted">
         <Container>
           <div className="max-w-2xl mx-auto text-center mb-12">
@@ -114,19 +106,7 @@ export default function LocationsPage() {
               While we serve clients nationwide, we specialize in New Mexico businesses. Every city page is optimized for local SEO to help you rank in your specific market.
             </p>
           </div>
-          <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
-            <iframe
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=New+Mexico,+USA&zoom=6"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Code In WordPress - New Mexico Service Area"
-              className="w-full h-[350px] md:h-[450px]"
-            />
-          </div>
+          <GoogleMap lat={34.5199} lng={-105.8701} zoom={6} title="Code In WordPress - New Mexico Service Area" className="h-[350px] md:h-[450px]" />
         </Container>
       </section>
 
