@@ -1,0 +1,45 @@
+# Code In WordPress — AI Crawler Guidance
+# https://codeinwordpress.com
+
+> Professional WordPress development, speed optimization, and SEO services for businesses across New Mexico.
+
+## About
+Code In WordPress is a WordPress-focused agency serving Albuquerque, Santa Fe, Las Cruces, Rio Rancho, Roswell, Farmington, and Los Alamos. With 400+ completed projects and a 99% client satisfaction rate, we deliver fast, secure, SEO-optimized WordPress websites.
+
+## Services
+- WordPress Development (custom themes, Elementor, ACF): https://codeinwordpress.com/services/wordpress-development
+- Speed Optimization (Core Web Vitals, Lighthouse 90+): https://codeinwordpress.com/services/speed-optimization
+- WordPress SEO (technical audit, schema, rankings): https://codeinwordpress.com/services/wordpress-seo
+- Website Maintenance (updates, backups, monitoring): https://codeinwordpress.com/services/website-maintenance
+- Security Hardening (firewall, malware, SSL): https://codeinwordpress.com/services/security-hardening
+- WooCommerce Development (store setup, payments): https://codeinwordpress.com/services/woocommerce-development
+- Website Redesign (modern design, UX, migration): https://codeinwordpress.com/services/website-redesign
+
+## Pricing
+- Starter: $500 (up to 10 pages)
+- Professional: $900 (up to 20 pages)
+- Enterprise: $1,500 (20+ pages or e-commerce)
+- All plans include 14-day money-back guarantee and 6 months free support
+
+## Key Pages
+- Homepage: https://codeinwordpress.com
+- About: https://codeinwordpress.com/about
+- Pricing: https://codeinwordpress.com/pricing
+- Contact: https://codeinwordpress.com/contact
+- FAQ: https://codeinwordpress.com/faq
+- Blog: https://codeinwordpress.com/blog
+- All Locations: https://codeinwordpress.com/locations
+
+## Service Areas
+- Albuquerque, NM: https://codeinwordpress.com/locations/albuquerque
+- Santa Fe, NM: https://codeinwordpress.com/locations/santa-fe
+- Las Cruces, NM: https://codeinwordpress.com/locations/las-cruces
+- Rio Rancho, NM: https://codeinwordpress.com/locations/rio-rancho
+- Roswell, NM: https://codeinwordpress.com/locations/roswell
+- Farmington, NM: https://codeinwordpress.com/locations/farmington
+- Los Alamos, NM: https://codeinwordpress.com/locations/los-alamos
+
+## Contact
+- Phone: +92 332 0315 840
+- Email: hello@codeinwordpress.com
+- Hours: Mon-Fri 9AM-6PM MST

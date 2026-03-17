@@ -1,0 +1,37 @@
+export const siteConfig = {
+  name: 'Code In WordPress',
+  shortName: 'CIW',
+  description: 'Professional WordPress development, speed optimization, and SEO services for businesses across New Mexico. Serving Albuquerque, Santa Fe, Las Cruces, and beyond.',
+  url: 'https://codeinwordpress.com',
+  phone: '+92 332 0315 840',
+  phoneDisplay: '+92 332 0315 840',
+  email: 'hello@codeinwordpress.com',
+  address: {
+    street: '',
+    city: 'Albuquerque',
+    state: 'NM',
+    zip: '87101',
+    country: 'US',
+  },
+  geo: {
+    lat: 35.0844,
+    lng: -106.6504,
+  },
+  social: {
+    linkedin: 'https://linkedin.com/company/codeinwordpress',
+    twitter: 'https://twitter.com/codeinwp',
+    facebook: 'https://facebook.com/codeinwordpress',
+    github: 'https://github.com/codeinwordpress',
+  },
+  hours: 'Mon-Fri 9:00 AM - 6:00 PM MST',
+  foundedYear: 2017,
+  tagline: 'WordPress Done Right',
+  ctaPrimary: 'Get a Free Quote',
+  ctaSecondary: 'View Our Work',
+  stats: {
+    projects: '400+',
+    clients: '200+',
+    experience: '8+',
+    satisfaction: '99%',
+  },
+}
