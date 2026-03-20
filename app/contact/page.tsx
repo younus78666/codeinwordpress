@@ -86,7 +86,7 @@ export default function ContactPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-1" showImage imageIndex={0}>
+      <StyledProseSection background="gradient-1" showImage imageIndex={0} imagePosition="left">
         <h2>What to Include in Your Project Brief</h2>
         <p>
           You do not need a detailed specification document to reach out to us. A few sentences about what you need is perfectly fine, and we will ask the right questions from there. That said, if you want to give us a head start, here is what helps us provide the most accurate initial assessment: a brief description of your business and what it does, what you want your website to accomplish such as generating leads, selling products, or building brand awareness, whether you have an existing website that needs to be rebuilt or if this is a brand-new site, any specific features you know you need like online booking, e-commerce, or membership areas, your approximate budget range if you have one in mind, and your ideal timeline for launch.
@@ -116,7 +116,7 @@ export default function ContactPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="white" showImage imageIndex={1}>
+      <StyledProseSection background="white" showImage imageIndex={1} imagePosition="right">
         <h2>Our Response Time Commitments</h2>
         <p>
           We take response times seriously because we know your time is valuable. For initial contact form submissions, we respond within twenty-four hours, with most responses going out within two to four hours during business hours. For active project clients, we guarantee same-business-day responses to all communications. For clients on our maintenance plans, urgent issues like site downtime or security concerns get a response within one hour, with resolution typically within four hours.
@@ -179,7 +179,7 @@ export default function ContactPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="muted" showImage imageIndex={2}>
+      <StyledProseSection background="muted" showImage imageIndex={2} imagePosition="left">
         <h2>Serving All of New Mexico and Beyond</h2>
         <p>
           While we work with clients worldwide, we have a special focus on serving businesses across New Mexico. We understand the unique economic landscape of this state, from the tourism-driven economies of Santa Fe, Taos, and Ruidoso to the service-based businesses that form the backbone of Albuquerque, Rio Rancho, and Las Cruces. We have worked with clients in Roswell, Carlsbad, Farmington, Silver City, Los Alamos, Gallup, Clovis, Hobbs, and Alamogordo. No matter where you are in the Land of Enchantment, we can build you a website that competes with anything coming out of larger markets.
@@ -199,7 +199,7 @@ export default function ContactPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="white" showImage imageIndex={3}>
+      <StyledProseSection background="white" showImage imageIndex={3} imagePosition="right">
         <h2>Why New Mexico Businesses Choose Us Over Competitors</h2>
         <p>
           When business owners in New Mexico start looking for a WordPress developer, they typically find three types of options: national agencies that charge premium rates and treat local businesses as small fish, local freelancers who may lack the technical depth for complex projects, and offshore developers who offer low prices but create communication challenges and quality inconsistencies. We occupy a deliberate sweet spot between all three.

@@ -49,7 +49,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Portfolio Introduction */}
-      <StyledProseSection background="white" showImage imageIndex={0}>
+      <StyledProseSection background="white" showImage imageIndex={0} imagePosition="right">
         <h2>Our Approach to Every WordPress Project</h2>
 
         <p>

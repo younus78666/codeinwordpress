@@ -56,7 +56,7 @@ export default function PricingPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-1" showImage={true} imageIndex={0}>
+      <StyledProseSection background="gradient-1" showImage={true} imageIndex={0} imagePosition="right">
         <h2>How We Determine Pricing for Custom Projects</h2>
         <p>
           Not every project fits neatly into a predefined package, and we are completely comfortable with that. When a project requires custom functionality, our pricing is based on four key factors: the number and complexity of pages, the level of custom development required such as custom plugins or theme modifications, the integrations needed with third-party systems, and the content migration workload if you have an existing site.
@@ -86,7 +86,7 @@ export default function PricingPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-3" showImage={true} imageIndex={3}>
+      <StyledProseSection background="gradient-3" showImage={true} imageIndex={3} imagePosition="left">
         <h2>The ROI of Investing in a Professional WordPress Site</h2>
         <p>
           We understand that spending money on a website can feel like a leap of faith, especially for small businesses watching every dollar. So let us talk about return on investment in concrete terms. A well-built WordPress site is not an expense. It is a revenue-generating asset that works for your business twenty-four hours a day, seven days a week.
@@ -119,7 +119,7 @@ export default function PricingPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="muted" showImage={true} imageIndex={5}>
+      <StyledProseSection background="muted" showImage={true} imageIndex={5} imagePosition="right">
         <h2>Why We Include Six Months of Free Support</h2>
         <p>
           This is one of the things our clients appreciate most, and it is something many agencies simply do not offer. We include six months of post-launch support with every project because we know from experience that the first few months after launch are when most issues surface. Maybe you need to update some content. Maybe a plugin needs a compatibility patch after a WordPress update. Maybe you want to add a new team member&#39;s bio to the About page. These small tasks should not cost you extra when you just paid for a brand-new website.

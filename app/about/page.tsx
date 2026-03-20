@@ -69,7 +69,7 @@ export default function AboutPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-1" showImage={true} imageIndex={0}>
+      <StyledProseSection background="gradient-1" showImage={true} imageIndex={0} imagePosition="left">
         <h2>The Problem We Set Out to Solve</h2>
         <p>
           New Mexico has a unique business landscape. We have a thriving mix of tourism-dependent businesses in Santa Fe and Taos, service companies across Albuquerque and Rio Rancho, agricultural operations in the southern part of the state, and a growing tech corridor around Los Alamos and Sandia. Each of these sectors has different needs, different audiences, and different competitive pressures online. A cookie-cutter WordPress template does not serve any of them well.
@@ -98,7 +98,7 @@ export default function AboutPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-2" showImage={true} imageIndex={2}>
+      <StyledProseSection background="gradient-2" showImage={true} imageIndex={2} imagePosition="right">
         <h2>Code Quality Over Template Shortcuts</h2>
         <p>
           There is a fundamental difference between a WordPress site that is assembled and a WordPress site that is built. Assembled sites use heavy page builders like Elementor or Divi, loading hundreds of kilobytes of unnecessary CSS and JavaScript on every page. They look decent on the surface but crumble under performance audits. They are difficult to maintain, nearly impossible to migrate, and create vendor lock-in with specific plugin ecosystems.
@@ -121,7 +121,7 @@ export default function AboutPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="white" showImage={true} imageIndex={4}>
+      <StyledProseSection background="white" showImage={true} imageIndex={4} imagePosition="left">
         <h2>How We Work with Clients</h2>
         <p>
           We are a remote-first agency, which means we work efficiently with clients across all of New Mexico and beyond. But remote does not mean disconnected. Every client gets a dedicated project manager, a shared project dashboard where you can track progress in real time, and direct access to the developer working on your site. We do not hide behind support ticket systems or force you to explain your needs to a different person every time you reach out.

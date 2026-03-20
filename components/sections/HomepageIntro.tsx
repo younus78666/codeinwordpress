@@ -23,7 +23,7 @@ export function HomepageIntro() {
         </Container>
       </section>
 
-      <StyledProseSection background="white" showImage imageIndex={3}>
+      <StyledProseSection background="white" showImage imageIndex={3} imagePosition="right">
         <p>
           Code In WordPress started with a simple idea: New Mexico businesses
           deserve better websites. Not template-based throwaway sites that look

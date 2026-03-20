@@ -41,7 +41,7 @@ export default function LocationsPage() {
       </section>
 
       {/* Locations Introduction */}
-      <StyledProseSection background="white" showImage imageIndex={2}>
+      <StyledProseSection background="white" showImage imageIndex={2} imagePosition="left">
         <h2>Why Local WordPress Expertise Matters</h2>
 
         <p>

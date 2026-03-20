@@ -39,7 +39,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Introduction */}
-      <StyledProseSection background="white" showImage imageIndex={1}>
+      <StyledProseSection background="white" showImage imageIndex={1} imagePosition="left">
         <h2>A Comprehensive Approach to WordPress Services</h2>
 
         <p>

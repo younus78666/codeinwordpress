@@ -52,7 +52,7 @@ export default function FAQPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-1" showImage imageIndex={0}>
+      <StyledProseSection background="gradient-1" showImage imageIndex={0} imagePosition="left">
         <h2>Common Concerns About Website Development</h2>
         <p>
           The most common concern we hear from New Mexico business owners is about
@@ -148,7 +148,7 @@ export default function FAQPage() {
         </p>
       </StyledProseSection>
 
-      <StyledProseSection background="gradient-3" showImage imageIndex={1}>
+      <StyledProseSection background="gradient-3" showImage imageIndex={1} imagePosition="right">
         <h2>Our Approach to Client Education</h2>
         <p>
           We believe that informed clients make better decisions and get better
