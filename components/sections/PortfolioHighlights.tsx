@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import { projects } from '@/content/portfolio'
+import { portfolioImages } from '@/content/images'
 import { SectionWrapper, Card, Badge } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { Button } from '@/components/ui/Button'
@@ -10,6 +12,15 @@ const gradients = [
   'bg-gradient-to-br from-accent-500 to-primary-600',
   'bg-gradient-to-br from-primary-700 to-primary-500',
 ]
+
+const projectImageMap: Record<string, string> = {
+  'desert-bloom-interiors': portfolioImages.interiorDesign,
+  'ortega-law-group': portfolioImages.lawFirm,
+  'southwest-medical-associates': portfolioImages.medical,
+  'mountain-trail-adventures': portfolioImages.outdoor,
+  'atomic-coffee-roasters': portfolioImages.coffee,
+  'rio-grande-construction': portfolioImages.construction,
+}
 
 function UpArrowIcon() {
   return (
@@ -33,12 +44,19 @@ export function PortfolioHighlights() {
           <AnimateOnScroll key={project.slug} delay={i * 100}>
             <div className="group h-full">
               <div className="h-full flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-500 hover:shadow-[0_0_30px_rgba(8,145,178,0.15)] hover:border-primary-300 hover:-translate-y-1">
-                {/* Gradient header */}
-                <div className={`${gradients[i]} px-6 py-8 relative`}>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.15),transparent_60%)]" aria-hidden="true" />
+                {/* Image header with gradient overlay */}
+                <div className="relative px-6 py-8 overflow-hidden">
+                  <Image
+                    src={projectImageMap[project.slug] || portfolioImages.interiorDesign}
+                    alt={project.client}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                  <div className={`absolute inset-0 ${gradients[i]} opacity-80`} />
 
                   {/* Number badge */}
-                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-sm font-heading font-bold text-white border border-white/20">
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-sm font-heading font-bold text-white border border-white/20 z-10">
                     {String(i + 1).padStart(2, '0')}
                   </div>
 

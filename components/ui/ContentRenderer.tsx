@@ -1,11 +1,13 @@
 'use client'
 
+import Image from 'next/image'
 import { Container } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
+import { contentImages } from '@/content/images'
 
 /**
  * ContentRenderer splits HTML content by <h2> tags and renders each section
- * with alternating background colors, gradient image placeholders, and
+ * with alternating background colors, real Unsplash images, and
  * visual design elements. Turns wall-of-text into designed content sections.
  */
 
@@ -50,43 +52,19 @@ const bgPatterns = [
   'bg-gradient-to-r from-white via-primary-50/20 to-white',
 ]
 
-const gradientImages = [
-  'from-primary-500 to-primary-700',
-  'from-accent-500 to-primary-600',
-  'from-primary-600 to-accent-500',
-  'from-accent-600 to-primary-500',
-  'from-primary-400 to-accent-600',
-  'from-primary-700 to-accent-400',
-]
-
-const decorativeIcons = [
-  'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z',
-  'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z',
-  'M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941',
-  'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
-  'M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5',
-  'M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z',
-]
-
-function GradientImagePlaceholder({ index }: { index: number }) {
-  const gradient = gradientImages[index % gradientImages.length]
-  const icon = decorativeIcons[index % decorativeIcons.length]
-
+function ContentImage({ index }: { index: number }) {
+  const src = contentImages[index % contentImages.length]
   return (
-    <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${gradient} aspect-[16/9] md:aspect-[2/1] flex items-center justify-center`}>
-      {/* Grid overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
-      {/* Decorative blobs */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
-      <div className="absolute bottom-0 left-0 w-40 h-40 bg-white/5 rounded-full blur-3xl" />
-      {/* Center icon */}
-      <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-        <svg className="w-8 h-8 md:w-10 md:h-10 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d={icon} />
-        </svg>
-      </div>
-      {/* Dot pattern */}
-      <div className="absolute inset-0 dot-pattern opacity-10" />
+    <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[2.2/1]">
+      <Image
+        src={src}
+        alt=""
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, 1200px"
+      />
+      {/* Gradient overlay for visual polish */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary-950/20 via-transparent to-transparent" />
     </div>
   )
 }
@@ -112,7 +90,7 @@ export function ContentRenderer({ html }: { html: string }) {
               <AnimateOnScroll>
                 {showImage && (
                   <div className="mb-10">
-                    <GradientImagePlaceholder index={i} />
+                    <ContentImage index={i} />
                   </div>
                 )}
 
@@ -185,7 +163,7 @@ export function StyledProseSection({
         {showImage && (
           <AnimateOnScroll>
             <div className="mb-10">
-              <GradientImagePlaceholder index={imageIndex} />
+              <ContentImage index={imageIndex} />
             </div>
           </AnimateOnScroll>
         )}

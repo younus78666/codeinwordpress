@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { locations } from '@/content/locations'
 import { SectionWrapper } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
@@ -11,31 +12,20 @@ export function CitiesServed() {
       subheading="From the Rio Grande Valley to the Four Corners, we build WordPress websites for businesses in every major New Mexico market."
     >
       <div className="max-w-5xl mx-auto">
-        {/* Gradient map placeholder */}
+        {/* New Mexico landscape image */}
         <AnimateOnScroll>
-          <div className="relative w-full h-48 md:h-64 rounded-2xl overflow-hidden mb-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-400 to-primary-600" />
-            {/* Pattern overlay to suggest topography */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.12)_1px,transparent_0)] bg-[length:16px_16px]" />
-            {/* Wavy line decorations to suggest terrain */}
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-              <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-              <div className="absolute top-3/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white to-transparent" />
-            </div>
-            {/* City dot markers */}
-            <div className="absolute top-[30%] left-[40%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[45%] left-[55%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[60%] left-[35%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[25%] left-[65%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[70%] left-[50%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[40%] left-[25%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            <div className="absolute top-[55%] left-[70%] w-3 h-3 rounded-full bg-white shadow-lg shadow-white/30" />
-            {/* Label overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-white/90 font-heading font-bold text-lg md:text-2xl tracking-wide drop-shadow-lg">
-                New Mexico Service Area
-              </span>
+          <div className="relative rounded-2xl overflow-hidden aspect-[3/1] mb-10 shadow-lg">
+            <Image
+              src="https://images.unsplash.com/photo-1570366583862-f91883984fde?auto=format&fit=crop&w=1200&h=400&q=80"
+              alt="New Mexico landscape - Albuquerque balloon fiesta"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary-950/60 via-primary-950/20 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+              <p className="text-white font-heading font-bold text-xl md:text-2xl">Serving All of New Mexico</p>
+              <p className="text-white/80 text-sm mt-1">7 major metros and growing</p>
             </div>
           </div>
         </AnimateOnScroll>

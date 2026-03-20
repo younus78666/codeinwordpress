@@ -1,36 +1,38 @@
+import Image from 'next/image'
 import { SectionWrapper } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
+import { processImages } from '@/content/images'
 
 const steps = [
   {
     number: '01',
     title: 'Discovery and Audit',
     description: 'Every project starts with a conversation. We learn about your business, your customers, your competitors, and what success looks like for you. If you have an existing site, we run a full technical audit covering speed, SEO health, security vulnerabilities, and content gaps. This is not a generic checklist. It is a custom analysis of where you stand and what it takes to win.',
-    gradient: 'from-primary-400 to-primary-600',
+    image: processImages.discovery,
   },
   {
     number: '02',
     title: 'Strategy and Architecture',
     description: 'Based on what we learn in discovery, we map out your site architecture, keyword targets, content structure, and technical requirements. You get a clear plan with page counts, timelines, and deliverables before we write a single line of code. No guessing, no scope creep, no surprises.',
-    gradient: 'from-primary-500 to-accent-500',
+    image: processImages.strategy,
   },
   {
     number: '03',
     title: 'Design and Development',
     description: 'We build your WordPress website with clean, hand-written code. Not a recycled template with your logo slapped on. Every page is responsive from the first pixel, optimized for speed, and structured for search engines. We use Elementor Pro for sections that need easy editing and custom PHP when the situation demands it.',
-    gradient: 'from-accent-400 to-primary-500',
+    image: processImages.design,
   },
   {
     number: '04',
     title: 'SEO Integration and Testing',
     description: 'Before launch, every page gets its meta tags, schema markup, Open Graph tags, and internal links. We test across devices, browsers, and connection speeds. We verify your Google Search Console and Analytics setup. We check your Core Web Vitals. If anything scores below 90 on Lighthouse, we fix it before you see it.',
-    gradient: 'from-primary-600 to-accent-400',
+    image: processImages.testing,
   },
   {
     number: '05',
     title: 'Launch and Ongoing Support',
     description: 'We deploy your site, submit it to Google for indexing, and walk you through how to manage it yourself. Then we stick around. Every project includes 6 months of free post-launch support for bug fixes, content updates, and technical questions. After that, our maintenance plans keep things running smooth and secure.',
-    gradient: 'from-accent-500 to-primary-400',
+    image: processImages.launch,
   },
 ]
 
@@ -78,23 +80,19 @@ export function HowWeWork() {
                       </div>
                     </div>
 
-                    {/* Gradient image placeholder side */}
+                    {/* Image side */}
                     <div className="flex-1 w-full flex justify-center">
-                      <div className="relative w-full max-w-xs aspect-square">
-                        <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${step.gradient} opacity-90 shadow-xl`}>
-                          {/* Dot pattern overlay */}
-                          <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]" />
-                          {/* Decorative inner shapes */}
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm" />
-                          </div>
-                          <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10" />
-                          <div className="absolute bottom-6 left-6 w-12 h-12 rounded-lg bg-white/10 rotate-12" />
+                      <div className="relative w-full max-w-xs">
+                        <div className="relative rounded-2xl overflow-hidden aspect-square shadow-lg">
+                          <Image
+                            src={step.image}
+                            alt={step.title}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 300px"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-primary-950/30 via-transparent to-transparent" />
                         </div>
-                        {/* Decorative dots around the image */}
-                        <div className="absolute -top-2 -right-2 w-4 h-4 rounded-full bg-accent-300/60" aria-hidden="true" />
-                        <div className="absolute -bottom-3 -left-3 w-5 h-5 rounded-full bg-primary-300/60" aria-hidden="true" />
-                        <div className="absolute top-1/2 -right-4 w-3 h-3 rounded-full bg-primary-400/40" aria-hidden="true" />
                       </div>
                     </div>
                   </div>
