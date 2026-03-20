@@ -12,7 +12,7 @@ import { CTABanner } from '@/components/sections/Features'
 import { Testimonials } from '@/components/sections/Testimonials'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'About Our WordPress Agency | Our Story & Values',
+  title: 'About Us | 8+ Years of WordPress Excellence in NM',
   description: `Learn about ${siteConfig.name} — a WordPress development agency with ${siteConfig.stats.experience} years of experience, ${siteConfig.stats.projects} completed projects, and a ${siteConfig.stats.satisfaction} client satisfaction rate.`,
   path: '/about',
 })

@@ -6,6 +6,7 @@ import { SearchModal } from '@/components/layout/SearchModal'
 import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { CookieConsent } from '@/components/layout/CookieConsent'
 import { SkipToContent, LeadPopup } from '@/components/layout/ClientComponents'
+import { OrganizationSchema, WebSiteSchema } from '@/components/seo/JsonLd'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -55,6 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen flex flex-col">
+        <OrganizationSchema />
+        <WebSiteSchema />
         <SkipToContent />
         <Header />
         <main id="main-content" className="flex-1">

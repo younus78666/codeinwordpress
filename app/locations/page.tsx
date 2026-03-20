@@ -13,7 +13,7 @@ import { GoogleMap } from '@/components/sections/GoogleMap'
 import { StyledProseSection } from '@/components/ui/ContentRenderer'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'WordPress Agency Serving All of New Mexico',
+  title: 'Service Areas | WordPress Agency Across New Mexico',
   description: 'Professional WordPress development and SEO services in Albuquerque, Santa Fe, Las Cruces, Rio Rancho, Roswell, Farmington, and Los Alamos. Serving all 7 major NM cities.',
   path: '/locations',
 })

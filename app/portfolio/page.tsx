@@ -11,7 +11,7 @@ import { CTABanner } from '@/components/sections/Features'
 import { StyledProseSection } from '@/components/ui/ContentRenderer'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Our Work: WordPress Case Studies & Results',
+  title: 'Portfolio | WordPress Case Studies & Proven Results',
   description:
     'See how we help New Mexico businesses grow with WordPress. Real case studies with measurable results: faster sites, higher rankings, and more revenue.',
   path: '/portfolio',
@@ -260,10 +260,10 @@ export default function PortfolioPage() {
                       {project.duration} &middot; {project.year}
                     </span>
                     <Link
-                      href="/contact"
+                      href={`/portfolio/${project.slug}`}
                       className="inline-flex items-center gap-1.5 text-sm font-heading font-semibold text-primary-600 hover:gap-2.5 transition-all"
                     >
-                      Start Similar Project
+                      View Case Study
                       <svg
                         className="w-4 h-4"
                         fill="none"

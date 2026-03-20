@@ -1,10 +1,10 @@
 # Code In WordPress — AI Crawler Guidance
 # https://codeinwordpress.com
 
-> Professional WordPress development, speed optimization, and SEO services for businesses across New Mexico.
+> Professional WordPress development, speed optimization, and SEO services for businesses across New Mexico. 400+ projects completed with 99% client satisfaction.
 
 ## About
-Code In WordPress is a WordPress-focused agency serving Albuquerque, Santa Fe, Las Cruces, Rio Rancho, Roswell, Farmington, and Los Alamos. With 400+ completed projects and a 99% client satisfaction rate, we deliver fast, secure, SEO-optimized WordPress websites.
+Code In WordPress is a WordPress-focused agency serving Albuquerque, Santa Fe, Las Cruces, Rio Rancho, Roswell, Farmington, and Los Alamos. Founded in 2017 by Muhammad Younus, we have completed 400+ WordPress projects across New Mexico and 12+ countries with a 99% client satisfaction rate. We specialize in custom development, speed optimization, technical SEO, and security hardening.
 
 ## Services
 - WordPress Development (custom themes, Elementor, ACF): https://codeinwordpress.com/services/wordpress-development
@@ -21,25 +21,48 @@ Code In WordPress is a WordPress-focused agency serving Albuquerque, Santa Fe, L
 - Enterprise: $1,500 (20+ pages or e-commerce)
 - All plans include 14-day money-back guarantee and 6 months free support
 
+## Portfolio / Case Studies
+- Desert Bloom Interiors (Interior Design, Albuquerque): https://codeinwordpress.com/portfolio/desert-bloom-interiors
+- Ortega Law Group (Law Firm, Santa Fe): https://codeinwordpress.com/portfolio/ortega-law-group
+- Southwest Medical Associates (Healthcare, Las Cruces): https://codeinwordpress.com/portfolio/southwest-medical-associates
+- Mountain Trail Adventures (Tourism, Farmington): https://codeinwordpress.com/portfolio/mountain-trail-adventures
+- Atomic Coffee Roasters (Coffee/E-commerce, Los Alamos): https://codeinwordpress.com/portfolio/atomic-coffee-roasters
+- Rio Grande Construction (Construction, Rio Rancho): https://codeinwordpress.com/portfolio/rio-grande-construction
+- All case studies: https://codeinwordpress.com/portfolio
+
 ## Key Pages
 - Homepage: https://codeinwordpress.com
 - About: https://codeinwordpress.com/about
+- Services: https://codeinwordpress.com/services
+- Portfolio: https://codeinwordpress.com/portfolio
 - Pricing: https://codeinwordpress.com/pricing
 - Contact: https://codeinwordpress.com/contact
 - FAQ: https://codeinwordpress.com/faq
 - Blog: https://codeinwordpress.com/blog
 - All Locations: https://codeinwordpress.com/locations
 
+## Blog Articles
+- WordPress Speed Optimization Guide 2026: https://codeinwordpress.com/blog/wordpress-speed-optimization-guide-2026
+- WordPress SEO Checklist for NM Businesses: https://codeinwordpress.com/blog/wordpress-seo-checklist-new-mexico-businesses
+- WordPress Website Cost Guide 2026: https://codeinwordpress.com/blog/how-much-does-wordpress-website-cost
+- WordPress Security Hardening Guide: https://codeinwordpress.com/blog/wordpress-security-hardening-guide
+- Elementor vs Gutenberg 2026: https://codeinwordpress.com/blog/elementor-vs-gutenberg-2026
+- WooCommerce Speed Optimization: https://codeinwordpress.com/blog/woocommerce-speed-optimization
+
 ## Service Areas
-- Albuquerque, NM: https://codeinwordpress.com/locations/albuquerque
-- Santa Fe, NM: https://codeinwordpress.com/locations/santa-fe
-- Las Cruces, NM: https://codeinwordpress.com/locations/las-cruces
-- Rio Rancho, NM: https://codeinwordpress.com/locations/rio-rancho
-- Roswell, NM: https://codeinwordpress.com/locations/roswell
-- Farmington, NM: https://codeinwordpress.com/locations/farmington
-- Los Alamos, NM: https://codeinwordpress.com/locations/los-alamos
+- Albuquerque, NM (pop. 564,000+): https://codeinwordpress.com/locations/albuquerque
+- Santa Fe, NM (pop. 89,000+): https://codeinwordpress.com/locations/santa-fe
+- Las Cruces, NM (pop. 111,000+): https://codeinwordpress.com/locations/las-cruces
+- Rio Rancho, NM (pop. 104,000+): https://codeinwordpress.com/locations/rio-rancho
+- Roswell, NM (pop. 48,000+): https://codeinwordpress.com/locations/roswell
+- Farmington, NM (pop. 46,000+): https://codeinwordpress.com/locations/farmington
+- Los Alamos, NM (pop. 19,000+): https://codeinwordpress.com/locations/los-alamos
+
+## Industries Served
+Healthcare & Medical, Legal & Law Firms, Restaurants & Hospitality, Construction & Home Services, Real Estate, E-Commerce & Retail, Tourism & Recreation, Nonprofits & Education
 
 ## Contact
 - Phone: +92 332 0315 840
 - Email: hello@codeinwordpress.com
 - Hours: Mon-Fri 9AM-6PM MST
+- Address: Albuquerque, NM 87101

@@ -14,7 +14,7 @@ import { CTABanner } from '@/components/sections/Features'
 import { BlogSidebar } from '@/components/sections/BlogSidebar'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'WordPress Blog | Tips, Guides & Insights',
+  title: 'WordPress Blog | Expert Tips, Guides & SEO Insights',
   description: 'WordPress development tips, speed optimization guides, SEO strategies, and maintenance best practices from the Code In WordPress team.',
   path: '/blog',
 })

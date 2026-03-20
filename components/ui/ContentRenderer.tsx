@@ -52,13 +52,29 @@ const bgPatterns = [
   'bg-gradient-to-r from-white via-primary-50/20 to-white',
 ]
 
+const imageAlts = [
+  'Analytics dashboard showing website performance metrics',
+  'Developer coding on a laptop in a modern workspace',
+  'Team collaborating on a web development project',
+  'Business meeting discussing website strategy',
+  'Performance dashboard with speed optimization results',
+  'Strategy planning session with whiteboard notes',
+  'Website design displayed on a monitor screen',
+  'Close-up of clean code on a developer screen',
+  'Website mockup and design prototype review',
+  'Server technology and hosting infrastructure',
+  'E-commerce product catalog and online store',
+  'Search engine optimization and keyword research',
+]
+
 function ContentImage({ index }: { index: number }) {
   const src = contentImages[index % contentImages.length]
+  const alt = imageAlts[index % imageAlts.length]
   return (
     <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[2.2/1]">
       <Image
         src={src}
-        alt=""
+        alt={alt}
         fill
         className="object-cover"
         sizes="(max-width: 768px) 100vw, 1200px"

@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { BreadcrumbSchema } from '@/components/seo/JsonLd'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Terms of Service',
+  title: 'Terms of Service | WordPress Development Agreement',
   description: `Terms of service for ${siteConfig.name}. Read our terms regarding WordPress development services, payments, and project delivery.`,
   path: '/terms-of-service',
 })

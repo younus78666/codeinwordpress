@@ -10,7 +10,7 @@ import { CTABanner } from '@/components/sections/Features'
 import { faqs } from '@/content/faqs'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'WordPress Development FAQ | Common Questions',
+  title: 'FAQ | WordPress Development Questions Answered',
   description: 'Get answers to common questions about WordPress development, pricing, timelines, maintenance, and SEO services from Code In WordPress.',
   path: '/faq',
 })

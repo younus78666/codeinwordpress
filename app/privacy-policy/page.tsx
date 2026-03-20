@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
 import { BreadcrumbSchema } from '@/components/seo/JsonLd'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'Privacy Policy',
+  title: 'Privacy Policy | How We Protect Your Data & Privacy',
   description: `Privacy policy for ${siteConfig.name}. Learn how we collect, use, and protect your personal information.`,
   path: '/privacy-policy',
 })

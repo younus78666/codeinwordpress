@@ -12,7 +12,7 @@ import { PortfolioHighlights } from '@/components/sections/PortfolioHighlights'
 import { BeforeAfter } from '@/components/sections/BeforeAfter'
 import { IndustriesServed } from '@/components/sections/IndustriesServed'
 import { FAQSection } from '@/components/sections/FAQ'
-import { OrganizationSchema, WebSiteSchema, FAQPageSchema } from '@/components/seo/JsonLd'
+import { FAQPageSchema } from '@/components/seo/JsonLd'
 import { faqs } from '@/content/faqs'
 
 export const metadata: Metadata = generatePageMetadata({
@@ -26,8 +26,6 @@ export default function HomePage() {
 
   return (
     <>
-      <OrganizationSchema />
-      <WebSiteSchema />
       <FAQPageSchema faqs={homeFaqs} />
       <Hero />
       <TrustedBy />

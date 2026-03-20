@@ -12,7 +12,7 @@ import { CTABanner } from '@/components/sections/Features'
 import { StyledProseSection } from '@/components/ui/ContentRenderer'
 
 export const metadata: Metadata = generatePageMetadata({
-  title: 'WordPress Services | Development, SEO & Speed',
+  title: 'WordPress Services | Dev, SEO, Speed & Maintenance',
   description: 'Professional WordPress development, speed optimization, SEO, maintenance, security, WooCommerce, and redesign services. Serving businesses across New Mexico.',
   path: '/services',
 })
