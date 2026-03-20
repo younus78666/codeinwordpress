@@ -8,6 +8,9 @@ import { WhyChooseUs, CTABanner } from '@/components/sections/Features'
 import { CitiesServed } from '@/components/sections/CitiesServed'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { TrustedBy } from '@/components/sections/TrustedBy'
+import { PortfolioHighlights } from '@/components/sections/PortfolioHighlights'
+import { BeforeAfter } from '@/components/sections/BeforeAfter'
+import { IndustriesServed } from '@/components/sections/IndustriesServed'
 import { FAQSection } from '@/components/sections/FAQ'
 import { OrganizationSchema, WebSiteSchema, FAQPageSchema } from '@/components/seo/JsonLd'
 import { faqs } from '@/content/faqs'
@@ -31,8 +34,11 @@ export default function HomePage() {
       <StatsBar />
       <HomepageIntro />
       <ServicesOverview />
+      <BeforeAfter />
       <HowWeWork />
+      <PortfolioHighlights />
       <WhyChooseUs />
+      <IndustriesServed />
       <CitiesServed />
       <Testimonials limit={3} />
       <CTABanner />
