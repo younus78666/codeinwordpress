@@ -11,6 +11,7 @@ import { BreadcrumbSchema, JsonLd } from '@/components/seo/JsonLd'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { CTABanner } from '@/components/sections/Features'
 import { BlogSidebar } from '@/components/sections/BlogSidebar'
+import { ContentRenderer } from '@/components/ui/ContentRenderer'
 
 type Props = { params: { slug: string } }
 

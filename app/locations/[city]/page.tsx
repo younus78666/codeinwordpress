@@ -14,6 +14,7 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { GoogleMap } from '@/components/sections/GoogleMap'
 import { FAQSection } from '@/components/sections/FAQ'
 import { CTABanner } from '@/components/sections/Features'
+import { ContentRenderer } from '@/components/ui/ContentRenderer'
 
 type Props = { params: { city: string } }
 
@@ -131,19 +132,8 @@ export default function LocationPage({ params }: Props) {
         </div>
       </SectionWrapper>
 
-      {/* Long-form content */}
-      {location.longContent && (
-        <section className="py-16 md:py-24">
-          <Container>
-            <div className="max-w-4xl mx-auto">
-              <div
-                className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-secondary-600 prose-p:leading-relaxed prose-a:text-primary-600 prose-a:underline prose-a:decoration-primary-300 prose-a:underline-offset-2 hover:prose-a:decoration-primary-600 prose-strong:text-foreground prose-li:text-secondary-600"
-                dangerouslySetInnerHTML={{ __html: location.longContent }}
-              />
-            </div>
-          </Container>
-        </section>
-      )}
+      {/* Long-form content with designed sections */}
+      {location.longContent && <ContentRenderer html={location.longContent} />}
 
       {/* Services Available */}
       <SectionWrapper

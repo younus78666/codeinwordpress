@@ -10,6 +10,7 @@ import { BreadcrumbSchema } from '@/components/seo/JsonLd'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { CTABanner } from '@/components/sections/Features'
 import { GoogleMap } from '@/components/sections/GoogleMap'
+import { StyledProseSection } from '@/components/ui/ContentRenderer'
 
 export const metadata: Metadata = generatePageMetadata({
   title: 'WordPress Agency Serving All of New Mexico',
@@ -40,179 +41,179 @@ export default function LocationsPage() {
       </section>
 
       {/* Locations Introduction */}
-      <section className="py-16 md:py-24">
-        <Container>
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none prose-headings:font-heading prose-p:text-secondary-600 prose-p:leading-relaxed prose-a:text-primary-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline">
-              <h2>Why Local WordPress Expertise Matters</h2>
+      <StyledProseSection background="white" showImage imageIndex={2}>
+        <h2>Why Local WordPress Expertise Matters</h2>
 
-              <p>
-                When a business in Albuquerque hires a WordPress agency from New York
-                or Los Angeles, they get a team that has never set foot in New Mexico,
-                does not understand the local market dynamics, and treats every city in
-                America the same way. We have spent over 8 years building WordPress
-                websites exclusively for New Mexico businesses, and that local focus
-                gives us advantages that remote agencies cannot replicate. We understand
-                the seasonal patterns that affect tourism businesses in Santa Fe. We
-                know which neighborhoods in Las Cruces are growing and where the
-                commercial development is heading. We understand the government and
-                laboratory economy in Los Alamos and how it shapes the service
-                businesses that support it.
-              </p>
+        <p>
+          When a business in Albuquerque hires a WordPress agency from New York
+          or Los Angeles, they get a team that has never set foot in New Mexico,
+          does not understand the local market dynamics, and treats every city in
+          America the same way. We have spent over 8 years building WordPress
+          websites exclusively for New Mexico businesses, and that local focus
+          gives us advantages that remote agencies cannot replicate. We understand
+          the seasonal patterns that affect tourism businesses in Santa Fe. We
+          know which neighborhoods in Las Cruces are growing and where the
+          commercial development is heading. We understand the government and
+          laboratory economy in Los Alamos and how it shapes the service
+          businesses that support it.
+        </p>
 
-              <p>
-                Local expertise also matters for SEO. Google's local search algorithm
-                rewards websites that demonstrate genuine relevance to a geographic
-                area. That means more than just mentioning a city name on your homepage.
-                It means building location-specific content, earning local backlinks,
-                managing your Google Business Profile correctly, and ensuring your NAP
-                (Name, Address, Phone) information is consistent across every directory
-                and citation source. We have done this work for over 400 businesses
-                across every major New Mexico city, and we know exactly what it takes
-                to rank in each local market.
-              </p>
+        <p>
+          Local expertise also matters for SEO. Google's local search algorithm
+          rewards websites that demonstrate genuine relevance to a geographic
+          area. That means more than just mentioning a city name on your homepage.
+          It means building location-specific content, earning local backlinks,
+          managing your Google Business Profile correctly, and ensuring your NAP
+          (Name, Address, Phone) information is consistent across every directory
+          and citation source. We have done this work for over 400 businesses
+          across every major New Mexico city, and we know exactly what it takes
+          to rank in each local market.
+        </p>
 
-              <h2>The New Mexico Business Landscape</h2>
+        <h2>The New Mexico Business Landscape</h2>
 
-              <p>
-                New Mexico's economy is diverse and distinct from any other state. In{' '}
-                <Link href="/locations/albuquerque">Albuquerque</Link>, the largest city
-                and economic hub, we serve businesses across healthcare, technology,
-                hospitality, legal services, home services, and retail. The Albuquerque
-                metro area, including <Link href="/locations/rio-rancho">Rio Rancho</Link>,
-                represents the state's largest consumer market and the most competitive
-                digital landscape. Businesses here need WordPress sites that can compete
-                against well-funded competitors with sophisticated online presences.
-              </p>
+        <p>
+          New Mexico's economy is diverse and distinct from any other state. In{' '}
+          <Link href="/locations/albuquerque">Albuquerque</Link>, the largest city
+          and economic hub, we serve businesses across healthcare, technology,
+          hospitality, legal services, home services, and retail. The Albuquerque
+          metro area, including <Link href="/locations/rio-rancho">Rio Rancho</Link>,
+          represents the state's largest consumer market and the most competitive
+          digital landscape. Businesses here need WordPress sites that can compete
+          against well-funded competitors with sophisticated online presences.
+        </p>
 
-              <p>
-                <Link href="/locations/santa-fe">Santa Fe</Link> presents a completely
-                different challenge. The state capital's economy is driven by art,
-                tourism, government, and high-end hospitality. Websites for Santa Fe
-                businesses need to convey premium quality while performing flawlessly
-                on mobile devices, since many visitors are tourists researching
-                restaurants, galleries, and hotels on their phones.{' '}
-                <Link href="/locations/las-cruces">Las Cruces</Link>, anchored by New
-                Mexico State University, has a growing technology sector alongside
-                traditional agriculture and healthcare industries.{' '}
-                <Link href="/locations/farmington">Farmington</Link> and the Four
-                Corners region serve the energy sector and outdoor recreation tourism.
-                Each market demands a tailored approach to WordPress development and
-                digital strategy.
-              </p>
+        <p>
+          <Link href="/locations/santa-fe">Santa Fe</Link> presents a completely
+          different challenge. The state capital's economy is driven by art,
+          tourism, government, and high-end hospitality. Websites for Santa Fe
+          businesses need to convey premium quality while performing flawlessly
+          on mobile devices, since many visitors are tourists researching
+          restaurants, galleries, and hotels on their phones.{' '}
+          <Link href="/locations/las-cruces">Las Cruces</Link>, anchored by New
+          Mexico State University, has a growing technology sector alongside
+          traditional agriculture and healthcare industries.{' '}
+          <Link href="/locations/farmington">Farmington</Link> and the Four
+          Corners region serve the energy sector and outdoor recreation tourism.
+          Each market demands a tailored approach to WordPress development and
+          digital strategy.
+        </p>
+      </StyledProseSection>
 
-              <h2>How We Tailor Our Approach for Each City</h2>
+      <StyledProseSection background="gradient-1">
+        <h2>How We Tailor Our Approach for Each City</h2>
 
-              <p>
-                We do not use a one-size-fits-all strategy for local SEO and WordPress
-                development. A dentist in Rio Rancho faces different competitive
-                dynamics than a dentist in Santa Fe. The search volume, the competitor
-                landscape, the customer demographics, and the conversion triggers are
-                all different. We research each local market individually before we
-                write a line of code or a word of content. This includes analyzing
-                the top-ranking competitors in your city, identifying the specific
-                search terms your potential customers are using, and understanding the
-                local factors that influence buying decisions.
-              </p>
+        <p>
+          We do not use a one-size-fits-all strategy for local SEO and WordPress
+          development. A dentist in Rio Rancho faces different competitive
+          dynamics than a dentist in Santa Fe. The search volume, the competitor
+          landscape, the customer demographics, and the conversion triggers are
+          all different. We research each local market individually before we
+          write a line of code or a word of content. This includes analyzing
+          the top-ranking competitors in your city, identifying the specific
+          search terms your potential customers are using, and understanding the
+          local factors that influence buying decisions.
+        </p>
 
-              <p>
-                For each city we serve, we have developed detailed market profiles that
-                inform our development and SEO strategy. We know that Albuquerque
-                businesses benefit from neighborhood-level targeting because the metro
-                area is large enough to support hyper-local search strategies. We know
-                that Santa Fe businesses often compete nationally for tourism-related
-                keywords while simultaneously targeting local residents for everyday
-                services. We know that Las Cruces businesses need to account for
-                cross-border traffic from El Paso. These insights come from years of
-                hands-on experience serving businesses in each market, not from reading
-                a census report.
-              </p>
+        <p>
+          For each city we serve, we have developed detailed market profiles that
+          inform our development and SEO strategy. We know that Albuquerque
+          businesses benefit from neighborhood-level targeting because the metro
+          area is large enough to support hyper-local search strategies. We know
+          that Santa Fe businesses often compete nationally for tourism-related
+          keywords while simultaneously targeting local residents for everyday
+          services. We know that Las Cruces businesses need to account for
+          cross-border traffic from El Paso. These insights come from years of
+          hands-on experience serving businesses in each market, not from reading
+          a census report.
+        </p>
 
-              <h2>Local SEO Advantages of Working with a New Mexico Agency</h2>
+        <h2>Local SEO Advantages of Working with a New Mexico Agency</h2>
 
-              <p>
-                Working with a WordPress agency that is based in New Mexico provides
-                tangible SEO advantages. We can create genuinely local content because
-                we know these communities firsthand. When we write location pages for
-                our clients, we reference real landmarks, real neighborhoods, and real
-                local events because we have actually been to these places. Google's
-                algorithms are increasingly sophisticated at detecting generic,
-                templated location content versus authentic, locally informed content.
-                Our pages rank because they are genuine, not because they are stuffed
-                with keywords.
-              </p>
+        <p>
+          Working with a WordPress agency that is based in New Mexico provides
+          tangible SEO advantages. We can create genuinely local content because
+          we know these communities firsthand. When we write location pages for
+          our clients, we reference real landmarks, real neighborhoods, and real
+          local events because we have actually been to these places. Google's
+          algorithms are increasingly sophisticated at detecting generic,
+          templated location content versus authentic, locally informed content.
+          Our pages rank because they are genuine, not because they are stuffed
+          with keywords.
+        </p>
 
-              <p>
-                We also maintain relationships with local business organizations,
-                chambers of commerce, and media outlets across New Mexico. These
-                relationships support our link-building efforts for clients who need
-                to establish local authority. A backlink from the Albuquerque Journal
-                or a mention in the Santa Fe Reporter carries more local SEO weight
-                than a link from a generic national directory. Our established presence
-                in the New Mexico business community gives our clients access to
-                link-building and PR opportunities that out-of-state agencies simply
-                cannot provide.
-              </p>
+        <p>
+          We also maintain relationships with local business organizations,
+          chambers of commerce, and media outlets across New Mexico. These
+          relationships support our link-building efforts for clients who need
+          to establish local authority. A backlink from the Albuquerque Journal
+          or a mention in the Santa Fe Reporter carries more local SEO weight
+          than a link from a generic national directory. Our established presence
+          in the New Mexico business community gives our clients access to
+          link-building and PR opportunities that out-of-state agencies simply
+          cannot provide.
+        </p>
+      </StyledProseSection>
 
-              <h2>Our Service Area Coverage</h2>
+      <StyledProseSection background="muted">
+        <h2>Our Service Area Coverage</h2>
 
-              <p>
-                We provide WordPress development, SEO, speed optimization, security,
-                maintenance, and WooCommerce services to businesses in every corner of
-                New Mexico. Our primary service areas include{' '}
-                <Link href="/locations/albuquerque">Albuquerque</Link>,{' '}
-                <Link href="/locations/santa-fe">Santa Fe</Link>,{' '}
-                <Link href="/locations/las-cruces">Las Cruces</Link>,{' '}
-                <Link href="/locations/rio-rancho">Rio Rancho</Link>,{' '}
-                <Link href="/locations/roswell">Roswell</Link>,{' '}
-                <Link href="/locations/farmington">Farmington</Link>, and{' '}
-                <Link href="/locations/los-alamos">Los Alamos</Link>. However, we
-                serve businesses throughout the state, including smaller communities
-                like Taos, Silver City, Carlsbad, Hobbs, Clovis, and Alamogordo. If
-                your business is in New Mexico, we can help you regardless of where
-                you are located.
-              </p>
+        <p>
+          We provide WordPress development, SEO, speed optimization, security,
+          maintenance, and WooCommerce services to businesses in every corner of
+          New Mexico. Our primary service areas include{' '}
+          <Link href="/locations/albuquerque">Albuquerque</Link>,{' '}
+          <Link href="/locations/santa-fe">Santa Fe</Link>,{' '}
+          <Link href="/locations/las-cruces">Las Cruces</Link>,{' '}
+          <Link href="/locations/rio-rancho">Rio Rancho</Link>,{' '}
+          <Link href="/locations/roswell">Roswell</Link>,{' '}
+          <Link href="/locations/farmington">Farmington</Link>, and{' '}
+          <Link href="/locations/los-alamos">Los Alamos</Link>. However, we
+          serve businesses throughout the state, including smaller communities
+          like Taos, Silver City, Carlsbad, Hobbs, Clovis, and Alamogordo. If
+          your business is in New Mexico, we can help you regardless of where
+          you are located.
+        </p>
 
-              <p>
-                Each city page below provides detailed information about our services
-                in that specific market, including the industries we commonly serve,
-                the local competitive landscape, and the results we have achieved for
-                businesses in that area. We encourage you to visit the page for your
-                city to learn how our WordPress expertise translates to real business
-                growth in your specific market.
-              </p>
+        <p>
+          Each city page below provides detailed information about our services
+          in that specific market, including the industries we commonly serve,
+          the local competitive landscape, and the results we have achieved for
+          businesses in that area. We encourage you to visit the page for your
+          city to learn how our WordPress expertise translates to real business
+          growth in your specific market.
+        </p>
+      </StyledProseSection>
 
-              <h2>Remote-First Approach with Local Market Knowledge</h2>
+      <StyledProseSection background="gradient-2">
+        <h2>Remote-First Approach with Local Market Knowledge</h2>
 
-              <p>
-                Our workflow is built for efficient remote collaboration. We use
-                video calls for discovery sessions and project reviews. We share
-                working prototypes through staging environments so you can see and
-                interact with your site throughout development. We communicate
-                through structured project management tools that keep every
-                conversation, decision, and file organized in one place. This
-                remote-first approach means we can serve businesses anywhere in
-                New Mexico without geographic limitations, while our deep local
-                knowledge ensures that your website is built with your specific
-                market in mind.
-              </p>
+        <p>
+          Our workflow is built for efficient remote collaboration. We use
+          video calls for discovery sessions and project reviews. We share
+          working prototypes through staging environments so you can see and
+          interact with your site throughout development. We communicate
+          through structured project management tools that keep every
+          conversation, decision, and file organized in one place. This
+          remote-first approach means we can serve businesses anywhere in
+          New Mexico without geographic limitations, while our deep local
+          knowledge ensures that your website is built with your specific
+          market in mind.
+        </p>
 
-              <p>
-                The combination of remote efficiency and local expertise is what
-                makes our approach unique. You get the convenience and cost savings
-                of a digital-first workflow with the strategic advantage of an agency
-                that truly understands New Mexico. We have delivered 400+ projects
-                with a 99% satisfaction rate using this model, and we have proven
-                that you do not need to sit in the same room as your web developer
-                to get outstanding results. What you need is a team that understands
-                your market, respects your time, and delivers measurable outcomes.
-                Explore our city pages below to see how we can help your business
-                grow in your specific New Mexico market.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
+        <p>
+          The combination of remote efficiency and local expertise is what
+          makes our approach unique. You get the convenience and cost savings
+          of a digital-first workflow with the strategic advantage of an agency
+          that truly understands New Mexico. We have delivered 400+ projects
+          with a 99% satisfaction rate using this model, and we have proven
+          that you do not need to sit in the same room as your web developer
+          to get outstanding results. What you need is a team that understands
+          your market, respects your time, and delivers measurable outcomes.
+          Explore our city pages below to see how we can help your business
+          grow in your specific New Mexico market.
+        </p>
+      </StyledProseSection>
 
       {/* Cities Grid */}
       <section className="py-16 md:py-24">

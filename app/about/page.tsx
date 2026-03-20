@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { generatePageMetadata } from '@/lib/metadata'
 import { siteConfig } from '@/content/site-config'
 import { SectionWrapper, Container, Card } from '@/components/ui/Shared'
+import { StyledProseSection } from '@/components/ui/ContentRenderer'
 import { Button } from '@/components/ui/Button'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { Breadcrumbs } from '@/components/seo/Breadcrumbs'
@@ -56,92 +57,102 @@ export default function AboutPage() {
       <StatsBar />
 
       {/* Our Story — Long-form UC 6.2 content */}
-      <SectionWrapper heading="Our Story" subheading="How a passion for clean code and fast websites turned into New Mexico's go-to WordPress agency.">
-        <div className="max-w-4xl mx-auto">
-          <AnimateOnScroll>
-            <div className="prose prose-lg max-w-none prose-headings:font-heading prose-p:text-secondary-600 prose-p:leading-relaxed">
-              <h2>It Started with a Slow Website and a Frustrated Business Owner</h2>
-              <p>
-                In 2017, I, Muhammad Younus, took on my very first freelance WordPress project. A small business owner in Albuquerque had paid a so-called agency over three thousand dollars for a website that took eleven seconds to load, had no SSL certificate, and ranked on exactly zero search terms. The owner was frustrated, embarrassed, and ready to give up on having an online presence altogether. I rebuilt that site from scratch in two weeks. Load time dropped to under two seconds. Within three months, the site was ranking for local keywords and generating real leads. That project changed the trajectory of my entire career.
-              </p>
-              <p>
-                I realized something important that year: small and mid-sized businesses, especially here in New Mexico, were being dramatically underserved. They were paying real money and getting template-based websites slapped together with bloated page builders, zero optimization, and no strategy behind any of it. The agencies building those sites moved on to the next client the moment the check cleared. There was no follow-up, no performance tracking, no ongoing relationship. It was transactional, and it showed in the results.
-              </p>
+      <StyledProseSection background="white">
+        <h2>Our Story</h2>
+        <p className="text-lg font-medium text-secondary-500 !mt-0">How a passion for clean code and fast websites turned into New Mexico&#39;s go-to WordPress agency.</p>
+        <h2>It Started with a Slow Website and a Frustrated Business Owner</h2>
+        <p>
+          In 2017, I, Muhammad Younus, took on my very first freelance WordPress project. A small business owner in Albuquerque had paid a so-called agency over three thousand dollars for a website that took eleven seconds to load, had no SSL certificate, and ranked on exactly zero search terms. The owner was frustrated, embarrassed, and ready to give up on having an online presence altogether. I rebuilt that site from scratch in two weeks. Load time dropped to under two seconds. Within three months, the site was ranking for local keywords and generating real leads. That project changed the trajectory of my entire career.
+        </p>
+        <p>
+          I realized something important that year: small and mid-sized businesses, especially here in New Mexico, were being dramatically underserved. They were paying real money and getting template-based websites slapped together with bloated page builders, zero optimization, and no strategy behind any of it. The agencies building those sites moved on to the next client the moment the check cleared. There was no follow-up, no performance tracking, no ongoing relationship. It was transactional, and it showed in the results.
+        </p>
+      </StyledProseSection>
 
-              <h2>The Problem We Set Out to Solve</h2>
-              <p>
-                New Mexico has a unique business landscape. We have a thriving mix of tourism-dependent businesses in Santa Fe and Taos, service companies across Albuquerque and Rio Rancho, agricultural operations in the southern part of the state, and a growing tech corridor around Los Alamos and Sandia. Each of these sectors has different needs, different audiences, and different competitive pressures online. A cookie-cutter WordPress template does not serve any of them well.
-              </p>
-              <p>
-                We saw the same pattern repeated over and over. A restaurant owner in Santa Fe would pay for a beautiful-looking site that loaded so slowly on mobile that tourists searching for dinner would bounce before the menu even appeared. A plumbing company in Las Cruces would get a site with no schema markup, no local SEO foundation, and no Google Business Profile integration, making them essentially invisible in local search results. A boutique hotel in Taos would have a booking system so poorly implemented that guests would abandon the reservation process out of sheer frustration.
-              </p>
-              <p>
-                These were not design problems. They were engineering problems. And they demanded an engineering-first approach to WordPress development. That conviction is what led to the founding of Code In WordPress.
-              </p>
+      <StyledProseSection background="gradient-1" showImage={true} imageIndex={0}>
+        <h2>The Problem We Set Out to Solve</h2>
+        <p>
+          New Mexico has a unique business landscape. We have a thriving mix of tourism-dependent businesses in Santa Fe and Taos, service companies across Albuquerque and Rio Rancho, agricultural operations in the southern part of the state, and a growing tech corridor around Los Alamos and Sandia. Each of these sectors has different needs, different audiences, and different competitive pressures online. A cookie-cutter WordPress template does not serve any of them well.
+        </p>
+        <p>
+          We saw the same pattern repeated over and over. A restaurant owner in Santa Fe would pay for a beautiful-looking site that loaded so slowly on mobile that tourists searching for dinner would bounce before the menu even appeared. A plumbing company in Las Cruces would get a site with no schema markup, no local SEO foundation, and no Google Business Profile integration, making them essentially invisible in local search results. A boutique hotel in Taos would have a booking system so poorly implemented that guests would abandon the reservation process out of sheer frustration.
+        </p>
+        <p>
+          These were not design problems. They were engineering problems. And they demanded an engineering-first approach to WordPress development. That conviction is what led to the founding of Code In WordPress.
+        </p>
+      </StyledProseSection>
 
-              <h2>Our Technical Philosophy: Speed, SEO, and Security from Day One</h2>
-              <p>
-                We do not treat performance, search optimization, and security as add-ons or afterthoughts. They are baked into our process from the very first line of code. Every project starts with a technical audit of your current situation, a competitive analysis of what your rivals are doing right and wrong online, and a clear strategy document that ties business goals to measurable web performance metrics.
-              </p>
-              <p>
-                On the speed front, we are obsessive. We hand-optimize every image, implement lazy loading strategically, minimize render-blocking resources, leverage browser caching, and configure server-level optimizations that most agencies do not even know exist. Our average page load time across all client sites is under 1.8 seconds. We have worked with businesses like a flooring company in Rio Rancho whose old site took over eight seconds to load. After our rebuild, their Core Web Vitals all hit green, and their organic traffic increased by sixty-two percent in the first quarter alone.
-              </p>
-              <p>
-                For SEO, we implement proper heading hierarchies, semantic HTML structure, structured data markup for local businesses, comprehensive meta tag strategies, XML sitemaps, and technical foundations that make it easy for search engines to crawl, index, and rank your pages. We have seen clients go from page three of Google to the local three-pack within four to six months simply because the technical SEO on their previous site was so poorly implemented.
-              </p>
-              <p>
-                Security is non-negotiable. Every site we build includes hardened WordPress configurations, two-factor authentication for admin access, automated daily backups with off-site storage, Web Application Firewall setup, malware scanning, and ongoing security monitoring. In eight-plus years of building WordPress sites, we have never had a client site compromised under our care. That is a track record we take very seriously.
-              </p>
+      <StyledProseSection background="muted">
+        <h2>Our Technical Philosophy: Speed, SEO, and Security from Day One</h2>
+        <p>
+          We do not treat performance, search optimization, and security as add-ons or afterthoughts. They are baked into our process from the very first line of code. Every project starts with a technical audit of your current situation, a competitive analysis of what your rivals are doing right and wrong online, and a clear strategy document that ties business goals to measurable web performance metrics.
+        </p>
+        <p>
+          On the speed front, we are obsessive. We hand-optimize every image, implement lazy loading strategically, minimize render-blocking resources, leverage browser caching, and configure server-level optimizations that most agencies do not even know exist. Our average page load time across all client sites is under 1.8 seconds. We have worked with businesses like a flooring company in Rio Rancho whose old site took over eight seconds to load. After our rebuild, their Core Web Vitals all hit green, and their organic traffic increased by sixty-two percent in the first quarter alone.
+        </p>
+        <p>
+          For SEO, we implement proper heading hierarchies, semantic HTML structure, structured data markup for local businesses, comprehensive meta tag strategies, XML sitemaps, and technical foundations that make it easy for search engines to crawl, index, and rank your pages. We have seen clients go from page three of Google to the local three-pack within four to six months simply because the technical SEO on their previous site was so poorly implemented.
+        </p>
+        <p>
+          Security is non-negotiable. Every site we build includes hardened WordPress configurations, two-factor authentication for admin access, automated daily backups with off-site storage, Web Application Firewall setup, malware scanning, and ongoing security monitoring. In eight-plus years of building WordPress sites, we have never had a client site compromised under our care. That is a track record we take very seriously.
+        </p>
+      </StyledProseSection>
 
-              <h2>Code Quality Over Template Shortcuts</h2>
-              <p>
-                There is a fundamental difference between a WordPress site that is assembled and a WordPress site that is built. Assembled sites use heavy page builders like Elementor or Divi, loading hundreds of kilobytes of unnecessary CSS and JavaScript on every page. They look decent on the surface but crumble under performance audits. They are difficult to maintain, nearly impossible to migrate, and create vendor lock-in with specific plugin ecosystems.
-              </p>
-              <p>
-                We take the opposite approach. We write clean, modular, well-documented code. We use lightweight themes or custom theme development. We rely on native WordPress functions and the block editor rather than third-party page builders wherever possible. When plugins are necessary, we vet each one for code quality, update frequency, security track record, and performance impact. The result is a site that loads fast, ranks well, is easy to update, and will not break when WordPress releases a major update.
-              </p>
-              <p>
-                Our developers understand WordPress at the code level. We are not just clicking buttons in a visual editor. We are writing PHP, JavaScript, and CSS that follows WordPress coding standards. We build custom Gutenberg blocks when off-the-shelf solutions fall short. We create child themes that protect your customizations during updates. This level of technical rigor is what separates a professional WordPress build from a template installation.
-              </p>
+      <StyledProseSection background="gradient-2" showImage={true} imageIndex={2}>
+        <h2>Code Quality Over Template Shortcuts</h2>
+        <p>
+          There is a fundamental difference between a WordPress site that is assembled and a WordPress site that is built. Assembled sites use heavy page builders like Elementor or Divi, loading hundreds of kilobytes of unnecessary CSS and JavaScript on every page. They look decent on the surface but crumble under performance audits. They are difficult to maintain, nearly impossible to migrate, and create vendor lock-in with specific plugin ecosystems.
+        </p>
+        <p>
+          We take the opposite approach. We write clean, modular, well-documented code. We use lightweight themes or custom theme development. We rely on native WordPress functions and the block editor rather than third-party page builders wherever possible. When plugins are necessary, we vet each one for code quality, update frequency, security track record, and performance impact. The result is a site that loads fast, ranks well, is easy to update, and will not break when WordPress releases a major update.
+        </p>
+        <p>
+          Our developers understand WordPress at the code level. We are not just clicking buttons in a visual editor. We are writing PHP, JavaScript, and CSS that follows WordPress coding standards. We build custom Gutenberg blocks when off-the-shelf solutions fall short. We create child themes that protect your customizations during updates. This level of technical rigor is what separates a professional WordPress build from a template installation.
+        </p>
+      </StyledProseSection>
 
-              <h2>The Team Behind the Code</h2>
-              <p>
-                Code In WordPress started as a one-person operation, and that scrappy, detail-oriented mentality still defines how we work. Our core team brings together expertise in WordPress development, front-end engineering, technical SEO, UI/UX design, and project management. Every team member has at least three years of professional experience working specifically with WordPress, and our senior developers have been in the ecosystem for over a decade.
-              </p>
-              <p>
-                I personally review every project before it launches. Every line of custom code gets a peer review. Every site goes through a sixty-point pre-launch checklist that covers everything from mobile responsiveness to schema validation to WCAG accessibility compliance. We do not ship work we would not put our own name on, because our name is literally on it.
-              </p>
+      <StyledProseSection background="gradient-3">
+        <h2>The Team Behind the Code</h2>
+        <p>
+          Code In WordPress started as a one-person operation, and that scrappy, detail-oriented mentality still defines how we work. Our core team brings together expertise in WordPress development, front-end engineering, technical SEO, UI/UX design, and project management. Every team member has at least three years of professional experience working specifically with WordPress, and our senior developers have been in the ecosystem for over a decade.
+        </p>
+        <p>
+          I personally review every project before it launches. Every line of custom code gets a peer review. Every site goes through a sixty-point pre-launch checklist that covers everything from mobile responsiveness to schema validation to WCAG accessibility compliance. We do not ship work we would not put our own name on, because our name is literally on it.
+        </p>
+      </StyledProseSection>
 
-              <h2>How We Work with Clients</h2>
-              <p>
-                We are a remote-first agency, which means we work efficiently with clients across all of New Mexico and beyond. But remote does not mean disconnected. Every client gets a dedicated project manager, a shared project dashboard where you can track progress in real time, and direct access to the developer working on your site. We do not hide behind support ticket systems or force you to explain your needs to a different person every time you reach out.
-              </p>
-              <p>
-                Our process starts with a discovery call where we listen more than we talk. We want to understand your business, your customers, your competition, and your goals before we write a single line of code. From there, we deliver a detailed proposal with clear scope, timeline, and pricing. Once approved, we work in weekly sprints with regular check-ins and visual progress updates so you are never left wondering where things stand.
-              </p>
-              <p>
-                For New Mexico businesses specifically, we offer in-person meetings in the Albuquerque metro area and are happy to travel to Santa Fe, Las Cruces, or anywhere in the state for larger projects. We understand the local market because we live and work here. We know that a tourism business in Ruidoso has different seasonal traffic patterns than a law firm in Albuquerque, and we build strategies accordingly.
-              </p>
+      <StyledProseSection background="white" showImage={true} imageIndex={4}>
+        <h2>How We Work with Clients</h2>
+        <p>
+          We are a remote-first agency, which means we work efficiently with clients across all of New Mexico and beyond. But remote does not mean disconnected. Every client gets a dedicated project manager, a shared project dashboard where you can track progress in real time, and direct access to the developer working on your site. We do not hide behind support ticket systems or force you to explain your needs to a different person every time you reach out.
+        </p>
+        <p>
+          Our process starts with a discovery call where we listen more than we talk. We want to understand your business, your customers, your competition, and your goals before we write a single line of code. From there, we deliver a detailed proposal with clear scope, timeline, and pricing. Once approved, we work in weekly sprints with regular check-ins and visual progress updates so you are never left wondering where things stand.
+        </p>
+        <p>
+          For New Mexico businesses specifically, we offer in-person meetings in the Albuquerque metro area and are happy to travel to Santa Fe, Las Cruces, or anywhere in the state for larger projects. We understand the local market because we live and work here. We know that a tourism business in Ruidoso has different seasonal traffic patterns than a law firm in Albuquerque, and we build strategies accordingly.
+        </p>
+      </StyledProseSection>
 
-              <h2>Results That Speak for Themselves</h2>
-              <p>
-                Over eight-plus years and four hundred-plus completed projects, we have developed a results-driven approach that consistently delivers measurable outcomes. Our clients see an average of forty percent more organic traffic within six months of launch. E-commerce clients typically see conversion rate improvements of twenty to thirty-five percent after a site rebuild. Local service businesses regularly report a two to three times increase in qualified leads from their website.
-              </p>
-              <p>
-                We maintain a ninety-nine percent client satisfaction rate, and the majority of our business comes from referrals and repeat clients. When a client comes back for a second, third, or fourth project, we take that as the highest possible compliment. It means we did not just deliver a website. We delivered a business asset that produced real returns.
-              </p>
+      <StyledProseSection background="gradient-1">
+        <h2>Results That Speak for Themselves</h2>
+        <p>
+          Over eight-plus years and four hundred-plus completed projects, we have developed a results-driven approach that consistently delivers measurable outcomes. Our clients see an average of forty percent more organic traffic within six months of launch. E-commerce clients typically see conversion rate improvements of twenty to thirty-five percent after a site rebuild. Local service businesses regularly report a two to three times increase in qualified leads from their website.
+        </p>
+        <p>
+          We maintain a ninety-nine percent client satisfaction rate, and the majority of our business comes from referrals and repeat clients. When a client comes back for a second, third, or fourth project, we take that as the highest possible compliment. It means we did not just deliver a website. We delivered a business asset that produced real returns.
+        </p>
+      </StyledProseSection>
 
-              <h2>Giving Back to the New Mexico Business Community</h2>
-              <p>
-                We believe in the New Mexico business community, and we are committed to helping it thrive online. We offer discounted rates for nonprofits and community organizations. We have provided free website audits and WordPress training sessions for small business groups in Albuquerque. We regularly publish educational content about WordPress best practices, SEO strategies, and web performance optimization that any business owner can benefit from.
-              </p>
-              <p>
-                New Mexico businesses deserve the same quality of web development that companies in Austin, Denver, or Phoenix have access to. Our mission is to make sure they get it, without the inflated prices that come with big-city agencies, and with the personalized attention that only a locally invested team can provide.
-              </p>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </SectionWrapper>
+      <StyledProseSection background="muted">
+        <h2>Giving Back to the New Mexico Business Community</h2>
+        <p>
+          We believe in the New Mexico business community, and we are committed to helping it thrive online. We offer discounted rates for nonprofits and community organizations. We have provided free website audits and WordPress training sessions for small business groups in Albuquerque. We regularly publish educational content about WordPress best practices, SEO strategies, and web performance optimization that any business owner can benefit from.
+        </p>
+        <p>
+          New Mexico businesses deserve the same quality of web development that companies in Austin, Denver, or Phoenix have access to. Our mission is to make sure they get it, without the inflated prices that come with big-city agencies, and with the personalized attention that only a locally invested team can provide.
+        </p>
+      </StyledProseSection>
 
       {/* Our Values */}
       <SectionWrapper heading="What We Stand For" subheading="The principles that guide every project, every decision, and every line of code.">
