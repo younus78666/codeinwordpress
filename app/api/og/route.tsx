@@ -16,102 +16,135 @@ export async function GET(request: NextRequest) {
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          padding: '80px',
-          background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 40%, #ffffff 70%, #ecfeff 100%)',
+          justifyContent: 'space-between',
+          padding: '60px 80px',
+          background: 'linear-gradient(145deg, #0f172a 0%, #1e3a8a 50%, #172554 100%)',
           fontFamily: 'system-ui, sans-serif',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        {/* Decorative elements */}
+        {/* Decorative gradient circles */}
         <div
           style={{
             position: 'absolute',
-            top: '-50px',
-            right: '-50px',
-            width: '300px',
-            height: '300px',
+            top: '-120px',
+            right: '-80px',
+            width: '450px',
+            height: '450px',
             borderRadius: '50%',
-            background: 'rgba(37, 99, 235, 0.08)',
+            background: 'radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, transparent 70%)',
           }}
         />
         <div
           style={{
             position: 'absolute',
-            bottom: '-80px',
-            left: '100px',
-            width: '250px',
-            height: '250px',
+            bottom: '-100px',
+            left: '-50px',
+            width: '350px',
+            height: '350px',
             borderRadius: '50%',
-            background: 'rgba(8, 145, 178, 0.06)',
+            background: 'radial-gradient(circle, rgba(8, 145, 178, 0.3) 0%, transparent 70%)',
           }}
         />
 
-        {/* Logo */}
+        {/* Grid pattern overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: '0',
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+
+        {/* Top section: Logo */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '12px',
-            marginBottom: '40px',
+            gap: '14px',
+            position: 'relative',
           }}
         >
           <div
             style={{
-              width: '48px',
-              height: '48px',
-              borderRadius: '12px',
-              background: '#2563eb',
+              width: '52px',
+              height: '52px',
+              borderRadius: '14px',
+              background: 'linear-gradient(135deg, #2563eb, #0891b2)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: 'white',
-              fontSize: '18px',
+              fontSize: '20px',
               fontWeight: 'bold',
             }}
           >
             &lt;/&gt;
           </div>
-          <span style={{ fontSize: '24px', fontWeight: 700, color: '#0f172a' }}>
+          <span style={{ fontSize: '26px', fontWeight: 700, color: 'rgba(255,255,255,0.9)' }}>
             Code In WordPress
           </span>
         </div>
 
-        {/* Title */}
-        <h1
+        {/* Middle section: Title + Subtitle */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', position: 'relative' }}>
+          <h1
+            style={{
+              fontSize: title.length > 50 ? '44px' : title.length > 35 ? '52px' : '60px',
+              fontWeight: 800,
+              color: '#ffffff',
+              lineHeight: 1.15,
+              maxWidth: '900px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            {title}
+          </h1>
+          <p
+            style={{
+              fontSize: '24px',
+              color: 'rgba(147, 197, 253, 0.9)',
+              lineHeight: 1.4,
+              maxWidth: '700px',
+            }}
+          >
+            {subtitle}
+          </p>
+        </div>
+
+        {/* Bottom section: Stats bar */}
+        <div
           style={{
-            fontSize: title.length > 40 ? '48px' : '56px',
-            fontWeight: 800,
-            color: '#0f172a',
-            lineHeight: 1.15,
-            marginBottom: '16px',
-            maxWidth: '900px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '40px',
+            position: 'relative',
           }}
         >
-          {title}
-        </h1>
+          {[
+            { value: '400+', label: 'Projects' },
+            { value: '99%', label: 'Satisfaction' },
+            { value: '8+', label: 'Years' },
+          ].map((stat) => (
+            <div key={stat.label} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+              <span style={{ fontSize: '28px', fontWeight: 800, color: '#60a5fa' }}>{stat.value}</span>
+              <span style={{ fontSize: '16px', color: 'rgba(148, 163, 184, 0.8)' }}>{stat.label}</span>
+            </div>
+          ))}
+        </div>
 
-        {/* Subtitle */}
-        <p
-          style={{
-            fontSize: '24px',
-            color: '#64748b',
-            lineHeight: 1.4,
-            maxWidth: '700px',
-          }}
-        >
-          {subtitle}
-        </p>
-
-        {/* Bottom bar */}
+        {/* Top gradient bar */}
         <div
           style={{
             position: 'absolute',
-            bottom: '0',
+            top: '0',
             left: '0',
             right: '0',
-            height: '6px',
-            background: 'linear-gradient(90deg, #2563eb, #0891b2)',
+            height: '4px',
+            background: 'linear-gradient(90deg, #2563eb, #0891b2, #2563eb)',
           }}
         />
       </div>

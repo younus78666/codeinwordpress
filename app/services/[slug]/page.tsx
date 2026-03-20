@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { services } from '@/content/services'
+import { ServiceIconComponent } from '@/components/ui/ServiceIcon'
 import { siteConfig } from '@/content/site-config'
 import { Container, SectionWrapper, Card } from '@/components/ui/Shared'
 import { Button } from '@/components/ui/Button'
@@ -78,7 +79,9 @@ export default function ServiceDetailPage({ params }: Props) {
             { name: service.shortTitle, href: `/services/${service.slug}` },
           ]} />
           <div className="max-w-3xl">
-            <div className="text-4xl mb-4">{service.icon}</div>
+            <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mb-4 text-primary-600">
+              <ServiceIconComponent icon={service.icon} className="w-8 h-8" />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight mb-6">
               {service.title}
             </h1>
@@ -95,6 +98,20 @@ export default function ServiceDetailPage({ params }: Props) {
           </div>
         </Container>
       </section>
+
+      {/* Long-form content */}
+      {service.longContent && (
+        <section className="py-16 md:py-24">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <div
+                className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-secondary-600 prose-p:leading-relaxed prose-a:text-primary-600 prose-a:underline prose-a:decoration-primary-300 prose-a:underline-offset-2 hover:prose-a:decoration-primary-600 prose-strong:text-foreground prose-li:text-secondary-600"
+                dangerouslySetInnerHTML={{ __html: service.longContent }}
+              />
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* What's Included */}
       <SectionWrapper heading="What&apos;s Included" subheading="Every deliverable is designed for measurable impact on your business.">
@@ -140,7 +157,9 @@ export default function ServiceDetailPage({ params }: Props) {
             <AnimateOnScroll key={r.slug} delay={i * 80}>
               <Link href={`/services/${r.slug}`} className="block h-full group">
                 <Card className="h-full" padding="lg">
-                  <div className="text-2xl mb-3">{r.icon}</div>
+                  <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-3 text-primary-600">
+                    <ServiceIconComponent icon={r.icon} className="w-5 h-5" />
+                  </div>
                   <h3 className="text-base font-heading font-bold text-foreground group-hover:text-primary-600 transition-colors mb-2">
                     {r.shortTitle}
                   </h3>

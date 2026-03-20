@@ -13,6 +13,7 @@ const searchData: SearchItem[] = [
   { title: 'Pricing', description: 'Transparent pricing starting at $500', href: '/pricing', category: 'Pages' },
   { title: 'FAQ', description: 'Common questions answered', href: '/faq', category: 'Pages' },
   { title: 'Blog', description: 'WordPress tips, guides, and insights', href: '/blog', category: 'Pages' },
+  { title: 'Portfolio', description: 'Case studies and project results', href: '/portfolio', category: 'Pages' },
   { title: 'All Locations', description: 'Service areas across New Mexico', href: '/locations', category: 'Pages' },
   { title: 'WordPress Development', description: 'Custom WordPress websites built from scratch', href: '/services/wordpress-development', category: 'Services' },
   { title: 'Speed Optimization', description: 'Make your WordPress site lightning fast', href: '/services/speed-optimization', category: 'Services' },

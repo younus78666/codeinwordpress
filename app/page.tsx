@@ -7,6 +7,7 @@ import { HowWeWork } from '@/components/sections/HowWeWork'
 import { WhyChooseUs, CTABanner } from '@/components/sections/Features'
 import { CitiesServed } from '@/components/sections/CitiesServed'
 import { Testimonials } from '@/components/sections/Testimonials'
+import { TrustedBy } from '@/components/sections/TrustedBy'
 import { FAQSection } from '@/components/sections/FAQ'
 import { OrganizationSchema, WebSiteSchema, FAQPageSchema } from '@/components/seo/JsonLd'
 import { faqs } from '@/content/faqs'
@@ -26,6 +27,7 @@ export default function HomePage() {
       <WebSiteSchema />
       <FAQPageSchema faqs={homeFaqs} />
       <Hero />
+      <TrustedBy />
       <StatsBar />
       <HomepageIntro />
       <ServicesOverview />

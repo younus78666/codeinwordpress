@@ -4,34 +4,40 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { Container } from '@/components/ui/Shared'
 import { siteConfig } from '@/content/site-config'
 
-const features = [
+type FeatureItem = {
+  iconPath: string
+  title: string
+  description: string
+}
+
+const features: FeatureItem[] = [
   {
-    icon: '⚡',
+    iconPath: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z',
     title: 'Speed That Actually Matters',
     description: 'Your visitors decide in under 3 seconds whether to stay or leave. We build every site to score 90+ on Google Lighthouse because speed directly impacts your bottom line. Not just fast on a test, fast for real people on real connections.',
   },
   {
-    icon: '🔍',
+    iconPath: 'M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z',
     title: 'SEO Baked In, Not Bolted On',
     description: 'Most agencies build a pretty site and then "add SEO later." We do it backwards. Schema markup, meta tags, sitemaps, internal linking, clean URLs. All of it goes in before the first pixel is placed. That way your site actually gets found.',
   },
   {
-    icon: '🛡️',
+    iconPath: 'M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z',
     title: 'Security You Can Sleep On',
     description: 'WordPress powers 43% of the web, which also makes it the biggest target for hackers. We harden every installation with firewall rules, two-factor auth, file permission lockdowns, and ongoing malware monitoring. Because one breach can undo years of trust.',
   },
   {
-    icon: '📱',
+    iconPath: 'M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3',
     title: 'Mobile-First, Always',
     description: 'Over 60% of your visitors are on their phone right now. Every layout, every button, every image we create starts on a small screen and scales up. Not the other way around. Your site will look and work great on any device.',
   },
   {
-    icon: '🤝',
+    iconPath: 'M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z',
     title: 'No Surprises on the Invoice',
     description: 'You will know exactly what you are paying for before we write a single line of code. Our pricing page is public, our scope documents are detailed, and we will never hit you with charges we did not discuss upfront. That is just how we operate.',
   },
   {
-    icon: '🔧',
+    iconPath: 'M11.42 15.17l-5.384-3.19A.75.75 0 005.25 12.72v6.57a.75.75 0 00.786.72l5.384-.32a.75.75 0 00.684-.663v-3.78a.75.75 0 00-.684-.077zM21.75 12a.75.75 0 01-.22.53l-5.25 5.25a.75.75 0 01-1.06 0l-5.25-5.25A.75.75 0 019.75 12V2.25a.75.75 0 01.22-.53l5.25-5.25',
     title: '6 Months of Free Support',
     description: 'We do not disappear after launch. Every project comes with six months of post-launch support for bug fixes, minor tweaks, and questions. If something breaks that we built, we fix it. Period. After that, our maintenance plans keep things running smooth.',
   },
@@ -47,7 +53,11 @@ export function WhyChooseUs() {
         {features.map((feature, i) => (
           <AnimateOnScroll key={feature.title} delay={i * 80}>
             <Card className="h-full" padding="lg">
-              <div className="text-3xl mb-4">{feature.icon}</div>
+              <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 text-primary-600">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d={feature.iconPath} />
+                </svg>
+              </div>
               <h3 className="text-lg font-heading font-bold text-foreground mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
             </Card>

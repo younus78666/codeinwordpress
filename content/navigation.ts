@@ -33,6 +33,7 @@ export const navigation: NavItem[] = [
       { label: 'Los Alamos', href: '/locations/los-alamos' },
     ],
   },
+  { label: 'Portfolio', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
@@ -49,6 +50,7 @@ export const footerLinks = {
   ],
   company: [
     { label: 'About Us', href: '/about' },
+    { label: 'Portfolio', href: '/portfolio' },
     { label: 'Blog', href: '/blog' },
     { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },

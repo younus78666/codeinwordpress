@@ -2,12 +2,30 @@ import Link from 'next/link'
 import { siteConfig } from '@/content/site-config'
 import { footerLinks } from '@/content/navigation'
 import { Container } from '@/components/ui/Shared'
+import { FooterNewsletter } from '@/components/sections/FooterNewsletter'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-primary-950 text-white" role="contentinfo">
+      {/* Newsletter CTA */}
+      <div className="border-b border-primary-900">
+        <Container className="py-12 md:py-16">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-heading font-bold text-white mb-1">
+                WordPress Tips, Delivered Weekly
+              </h3>
+              <p className="text-sm text-primary-300">
+                Join 1,000+ business owners getting actionable WordPress insights every Friday.
+              </p>
+            </div>
+            <FooterNewsletter />
+          </div>
+        </Container>
+      </div>
+
       {/* Main Footer */}
       <Container className="py-16 md:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">

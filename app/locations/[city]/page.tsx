@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
 import { locations } from '@/content/locations'
 import { services } from '@/content/services'
+import { ServiceIconComponent } from '@/components/ui/ServiceIcon'
 import { siteConfig } from '@/content/site-config'
 import { Container, SectionWrapper, Card } from '@/components/ui/Shared'
 import { Button } from '@/components/ui/Button'
@@ -130,6 +131,20 @@ export default function LocationPage({ params }: Props) {
         </div>
       </SectionWrapper>
 
+      {/* Long-form content */}
+      {location.longContent && (
+        <section className="py-16 md:py-24">
+          <Container>
+            <div className="max-w-4xl mx-auto">
+              <div
+                className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-foreground prose-headings:tracking-tight prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-secondary-600 prose-p:leading-relaxed prose-a:text-primary-600 prose-a:underline prose-a:decoration-primary-300 prose-a:underline-offset-2 hover:prose-a:decoration-primary-600 prose-strong:text-foreground prose-li:text-secondary-600"
+                dangerouslySetInnerHTML={{ __html: location.longContent }}
+              />
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* Services Available */}
       <SectionWrapper
         background="alt"
@@ -141,7 +156,9 @@ export default function LocationPage({ params }: Props) {
             <AnimateOnScroll key={service.slug} delay={i * 60}>
               <Link href={`/services/${service.slug}`} className="block h-full group">
                 <Card className="h-full" padding="md">
-                  <div className="text-2xl mb-3">{service.icon}</div>
+                  <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center mb-3 text-primary-600">
+                    <ServiceIconComponent icon={service.icon} className="w-5 h-5" />
+                  </div>
                   <h3 className="text-base font-heading font-bold text-foreground group-hover:text-primary-600 transition-colors mb-1">
                     {service.shortTitle}
                   </h3>

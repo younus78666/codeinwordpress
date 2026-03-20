@@ -3,6 +3,8 @@ import { siteConfig } from '@/content/site-config'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { SearchModal } from '@/components/layout/SearchModal'
+import { ScrollToTop } from '@/components/layout/ScrollToTop'
+import { CookieConsent } from '@/components/layout/CookieConsent'
 import { SkipToContent, LeadPopup } from '@/components/layout/ClientComponents'
 import './globals.css'
 
@@ -60,6 +62,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <SearchModal />
+        <ScrollToTop />
+        <CookieConsent />
         <LeadPopup />
       </body>
     </html>

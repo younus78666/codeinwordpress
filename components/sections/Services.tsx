@@ -3,6 +3,7 @@ import { services } from '@/content/services'
 import { siteConfig } from '@/content/site-config'
 import { SectionWrapper, Card } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
+import { ServiceIconComponent } from '@/components/ui/ServiceIcon'
 
 /* ── Services Overview ── */
 export function ServicesOverview() {
@@ -17,7 +18,9 @@ export function ServicesOverview() {
           <AnimateOnScroll key={service.slug} delay={i * 80}>
             <Link href={`/services/${service.slug}`} className="block h-full group">
               <Card className="h-full flex flex-col" padding="lg">
-                <div className="text-3xl mb-4">{service.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 text-primary-600">
+                  <ServiceIconComponent icon={service.icon} />
+                </div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-2 group-hover:text-primary-600 transition-colors">
                   {service.shortTitle}
                 </h3>
