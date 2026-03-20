@@ -3,6 +3,20 @@ import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 /* ── Industries Served ── */
 
+const iconGradients = [
+  'from-primary-500 to-accent-500',
+  'from-accent-500 to-pink-500',
+  'from-violet-500 to-primary-500',
+  'from-amber-500 to-orange-500',
+]
+
+const borderGradients = [
+  'from-primary-500 via-accent-500 to-transparent',
+  'from-accent-500 via-pink-500 to-transparent',
+  'from-violet-500 via-primary-500 to-transparent',
+  'from-amber-500 via-orange-500 to-transparent',
+]
+
 const industries = [
   {
     name: 'Healthcare & Medical',
@@ -87,26 +101,53 @@ export function IndustriesServed() {
       background="alt"
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-        {industries.map((industry, i) => (
-          <AnimateOnScroll key={industry.name} delay={i * 70}>
-            <div className="bg-card rounded-2xl border border-border p-6 transition-all duration-300 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1">
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white mb-4">
-                {industry.icon}
+        {industries.map((industry, i) => {
+          const gradientIdx = i % iconGradients.length
+          return (
+            <AnimateOnScroll key={industry.name} delay={i * 70}>
+              <div className="group relative bg-card rounded-2xl border border-border p-6 transition-all duration-300 hover:shadow-lg hover:border-primary-200 hover:-translate-y-1 overflow-hidden">
+                {/* Subtle pattern on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+                    backgroundSize: '16px 16px',
+                  }}
+                  aria-hidden="true"
+                />
+
+                {/* Icon with unique gradient */}
+                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${iconGradients[gradientIdx]} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  {industry.icon}
+                </div>
+
+                {/* Name */}
+                <h3 className="font-heading font-bold text-foreground mb-1">
+                  {industry.name}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {industry.description}
+                </p>
+
+                {/* Learn more link on hover */}
+                <div className="mt-3 flex items-center gap-1 text-sm font-medium text-primary-600 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                  <span>Learn more</span>
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+
+                {/* Thin gradient bottom border */}
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r ${borderGradients[gradientIdx]} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  aria-hidden="true"
+                />
               </div>
-
-              {/* Name */}
-              <h3 className="font-heading font-bold text-foreground mb-1">
-                {industry.name}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {industry.description}
-              </p>
-            </div>
-          </AnimateOnScroll>
-        ))}
+            </AnimateOnScroll>
+          )
+        })}
       </div>
     </SectionWrapper>
   )

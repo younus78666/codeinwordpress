@@ -52,13 +52,18 @@ export function WhyChooseUs() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {features.map((feature, i) => (
           <AnimateOnScroll key={feature.title} delay={i * 80}>
-            <Card className="h-full" padding="lg">
-              <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 text-primary-600">
+            <Card className="h-full relative border-l-4 border-l-transparent hover:border-l-primary-500 transition-all duration-300" padding="lg">
+              {/* Decorative number */}
+              <span className="absolute top-4 right-4 text-5xl font-display font-bold text-secondary-100 select-none">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-5 text-white">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d={feature.iconPath} />
                 </svg>
               </div>
-              <h3 className="text-lg font-heading font-bold text-foreground mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-heading font-bold text-foreground mb-3">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
             </Card>
           </AnimateOnScroll>
@@ -68,7 +73,7 @@ export function WhyChooseUs() {
   )
 }
 
-/* ── CTA Banner ── */
+/* -- CTA Banner -- */
 export function CTABanner({
   heading = 'Ready to Get a Website That Actually Works?',
   subheading = 'Tell us about your project. We will send you a detailed quote within 24 hours. No pressure, no commitment.',

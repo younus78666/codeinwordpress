@@ -5,7 +5,7 @@ import { SectionWrapper, Card } from '@/components/ui/Shared'
 import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 import { ServiceIconComponent } from '@/components/ui/ServiceIcon'
 
-/* ── Services Overview ── */
+/* -- Services Overview -- */
 export function ServicesOverview() {
   return (
     <SectionWrapper
@@ -17,8 +17,16 @@ export function ServicesOverview() {
         {services.slice(0, 6).map((service, i) => (
           <AnimateOnScroll key={service.slug} delay={i * 80}>
             <Link href={`/services/${service.slug}`} className="block h-full group">
-              <Card className="h-full flex flex-col" padding="lg">
-                <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 text-primary-600">
+              <Card className="h-full flex flex-col relative overflow-hidden" padding="lg">
+                {/* Gradient top border on hover */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-accent-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+
+                {/* Number indicator */}
+                <span className="absolute top-4 right-4 text-xs font-mono text-secondary-200">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4 text-white">
                   <ServiceIconComponent icon={service.icon} />
                 </div>
                 <h3 className="text-lg font-heading font-bold text-foreground mb-2 group-hover:text-primary-600 transition-colors">
@@ -27,6 +35,14 @@ export function ServicesOverview() {
                 <p className="text-sm text-muted-foreground flex-1 mb-4">
                   {service.description}
                 </p>
+
+                {/* Price badge */}
+                {service.price && (
+                  <span className="inline-flex items-center self-start px-3 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-heading font-semibold mb-4">
+                    {service.price}
+                  </span>
+                )}
+
                 <span className="inline-flex items-center gap-1 text-sm font-heading font-semibold text-primary-600 group-hover:gap-2 transition-all">
                   Learn more
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -42,7 +58,7 @@ export function ServicesOverview() {
   )
 }
 
-/* ── Stats Bar ── */
+/* -- Stats Bar -- */
 const stats = [
   {
     value: siteConfig.stats.projects,
